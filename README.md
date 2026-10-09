@@ -22,7 +22,7 @@ The production-ready static output is generated in `dist/`. It can be deployed t
 
 ## Assets
 
-Site-ready SVG marks are in `public/brand/`. The user-supplied rider sunset photo must be added to `public/images/gear-rider-sunset.jpg` for the photographic hero to appear. The photo is not yet committed as a binary. A dark color background is used if absent. Original PNG logos remain in the separately supplied asset package.
+Site-ready SVG marks are in `public/brand/`. The original rider image is now committed as `public/images/gear-rider-sunset.png`, with all uploaded PNG logos in `public/brand/` alongside SVG marks. Original PNG logos remain in the separately supplied asset package.
 
 ## Deployment
 
