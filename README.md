@@ -22,7 +22,7 @@ The production-ready static output is generated in `dist/`. It can be deployed t
 
 ## Assets
 
-Site-ready SVG marks are in `public/brand/`. The original rider image is now committed as `public/images/gear-rider-sunset.png`, with all uploaded PNG logos in `public/brand/` alongside SVG marks. Original PNG logos remain in the separately supplied asset package.
+Site-ready SVG marks are in `public/brand/`. The approved photos and logos are stored in `public/images/` (including `GEAR_Cover.png`, `GEAR_Moto_Foundation_BannerLogo.png`, and `Gear_Logo_White.png`). Current layouts directly reference these files. Keep originals in place. Original PNG logos remain in the separately supplied asset package.
 
 ## Deployment
 
