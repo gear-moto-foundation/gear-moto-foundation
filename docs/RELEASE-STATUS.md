@@ -6,7 +6,7 @@ The Astro source, six pages and SVG brand marks are committed to the repository.
 GitHub Actions runs `.github/workflows/build.yml` on every push to `main`, validates six static pages and uploads the `dist/` folder as a downloadable workflow artifact.
 
 ## Manual action still required
-The optimized original sunset photo is not yet checked into the repo. It is present in the standalone packaged build delivered in the same ChatGPT conversation. Add it as `public/images/gear-rider-sunset.jpg` through GitHub's web upload or via local git before relying on automated builds for the full visual design.
+The original GEAR image uploads have been added to `public/brand/` and `public/images/gear-rider-sunset.png`. The Astro hero now references the uploaded PNG. Verify build success in GitHub Actions before deployment.
 
 Deploy the built `dist/` files to the selected static hosting service once hosting access is configured. No live-domain deployment has been performed by the GitHub code change.
 
