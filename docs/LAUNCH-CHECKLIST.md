@@ -1,14 +1,13 @@
-# Launch readiness checklist
+# Static site launch checklist
 
-- [ ] Verify final organization name, leadership and legal status.
-- [ ] Verify IRS tax-exempt status, charitable solicitation obligations, and truthful fundraising disclosures.
-- [ ] Approve official logo, colors, photo rights, and website copy.
-- [ ] Approve final program eligibility, exclusions, funding limits, review process, and privacy controls.
-- [ ] Configure official email/contact form with spam protection.
-- [ ] Configure donation platform only when legally and operationally ready.
-- [ ] Back up WordPress before activating child theme.
-- [ ] Verify domain root and www DNS, SSL and WordPress URLs.
-- [ ] Test keyboard navigation, contrast, mobile sizes, forms, and links.
-- [ ] Set privacy notice and accessibility/contact information.
-- [ ] Check WordPress image uploads are JPG under 2 MB.
-- [ ] Check public pages make no claim of active grants or applications before activation.
+- [ ] Verify organization and tax status before public claims or solicitation.
+- [ ] Approve assistance eligibility, funding limits, and privacy procedures.
+- [ ] Add sunset hero photo to `public/images/gear-rider-sunset.jpg` and ensure each image stays under 2 MB.
+- [ ] Confirm all approved GEAR vector logo marks load on each page.
+- [ ] Run `npm install` and `npm run build`; verify no failed asset references.
+- [ ] Check contrast, keyboard navigation, mobile layout, semantic headings and alt text.
+- [ ] Confirm secure contact method and privacy disclosures before collecting personal information.
+- [ ] Configure static hosting with HTTPS and publish `dist/` contents.
+- [ ] Configure DNS only after the static host is tested.
+- [ ] Test homepage, About, Programs, Get Help, Contact and Support pages on production domain.
+- [ ] Enable donations and assistance applications only after formal approval and appropriate controls.
