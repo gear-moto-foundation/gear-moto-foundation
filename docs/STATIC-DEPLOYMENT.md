@@ -20,7 +20,7 @@ The `dist/` folder contains pre-rendered static files.
 6. Once verified, retire the previous deployment files and preserve an offline backup.
 
 ## Media
-The SVG GEAR marks are committed in `public/brand`. The uploaded motorcycle banner is committed as `public/images/gear-rider-sunset.png`. Optimize photographic assets to under 2 MB.
+The SVG GEAR marks are committed in `public/brand`. The approved images are stored in `public/images/`. The homepage uses `GEAR_Cover.png` as its background and `Gear_Logo_White.png` as its main wordmark. Optimize photographic assets to under 2 MB.
 
 ## Form / donation caveat
 This is a static site. Donation processing and a contact form require third-party services or a separate backend. No payment or application collection is enabled in this build.
