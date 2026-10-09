@@ -1,16 +1,25 @@
-# WordPress deployment: WestHost
+# WestHost / WordPress deployment
 
-The public GitHub repository does **not** automatically publish to WestHost.
+GitHub stores website code and vector logo references. The **original PNG logos and rider-at-sunset JPEG** are supplied in the separately downloadable **GEAR_Moto_Foundation_WordPress_Theme.zip**; they have not yet been uploaded as binary assets into the GitHub repo.
 
-1. Back up existing WordPress files and database.
-2. Confirm the Blocksy **parent** theme is installed and working.
-3. Download the `wordpress/gear-moto-child` directory, compress that folder as ZIP, and upload it in WordPress via **Appearance → Themes → Add New → Upload Theme**.
-4. Activate the child theme after confirming the parent theme is installed. Check site header, footer, typography and responsive styles.
-5. Create or update the WordPress pages using the drafts in `content/`. The homepage block structure can follow `preview/index.html`. Gutenberg group blocks can be given CSS classes such as `gear-hero`, `gear-section`, and `gear-programs`.
-6. Set the intended homepage at **Settings → Reading** and menus through Blocksy's header configuration.
-7. Run accessibility, mobile-layout, link and form checks before a public announcement.
+## Install the branded homepage
+1. Back up WordPress files and database.
+2. Confirm Blocksy parent theme is installed.
+3. Go to WordPress **Appearance → Themes → Add New → Upload Theme**.
+4. Upload the provided `GEAR_Moto_Foundation_WordPress_Theme.zip` and activate **GEAR Moto Foundation Child**.
+5. Open your WordPress **Home** page, add a **Shortcode** block containing `[gear_homepage]`, then save or preview it.
+6. Set that page as your static homepage at **Settings → Reading**.
+7. Use Blocksy's header builder to configure navigation and upload `Gear_Logo_White.png` for a dark header; use `Gear_Logo_Main.png` for light sections.
+8. Verify phone/mobile layout, logo legibility, buttons, link targets, contrast, and image loading.
+9. Keep assistance applications and donation processing disabled until the organization has approved them.
 
-## DNS / login notes
-Previous work involved WestHost cPanel WordPress one-click login token failures, DNS A-record and `www` hostname questions, and Bitdefender VPN. No current DNS IP, record values, or confirmed fault cause is recorded here. **Do not edit DNS** without checking authoritative records and current hosting IP. If cPanel token login fails, attempt the standard domain WordPress login path after verifying HTTPS resolves, and check whether a VPN, security rule, or cookie issue is involved.
+## Images included with the package
+- Main, black and white wordmarks plus G/E/A/R individual marks (SEO-oriented PNG filenames).
+- Optimized rider sunset JPG (`gear-hero-rider-sunset-1600.jpg`).
+- A small site icon; upload via WordPress Site Identity if desired.
+- Every single asset is smaller than 2 MB.
 
-Never paste login tokens, database credentials or `wp-config.php` into GitHub.
+## Cautions
+GitHub does not deploy code to WestHost automatically. No FTP credentials, cPanel access, secret login tokens, or DNS changes are required to install this design package through WordPress.
+
+Older site setup involved cPanel login-token failures, A-record / www troubleshooting, and a Bitdefender VPN. Do not change DNS solely to upload logos or the theme.
