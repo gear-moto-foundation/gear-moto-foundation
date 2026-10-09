@@ -54,3 +54,16 @@ h6{font-size:17px;font-weight:600}
 .footer-inner img{max-width:245px}.muted{font-size:13px;color:#dce0e4}
 .notice{padding:16px 25px;background:var(--gear-light);color:var(--gear-text);font-size:13px;border-top:1px solid var(--gear-border)}
 @media(max-width:780px){.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:15px}.cards{grid-template-columns:1fr}.hero{background-position:63% center}.hero-in{padding-top:70px}h1{font-size:clamp(40px,9vw,64px)}h2{font-size:clamp(32px,7vw,44px)}h3{font-size:clamp(26px,6vw,32px)}}
+
+/* GEAR's four equal program pillars */
+.gear-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pillar-card{position:relative}
+.pillar-letter{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:800;font-size:74px;line-height:1;color:var(--gear-primary)}
+.pillar-card h3{margin:12px 0}
+.program-callout{padding:22px 25px;margin-top:40px;background:var(--gear-light);border-left:5px solid var(--gear-primary)}
+.btn-outline-dark{border-color:var(--gear-heading);color:var(--gear-heading)}
+.footer-mission{display:flex;flex-direction:column;align-items:flex-end;gap:3px;font-size:13px}
+.footer-mission strong{color:#fff;letter-spacing:.035em}
+@media(max-width:1000px){.gear-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:780px){.footer-mission{align-items:flex-start}}
+@media(max-width:520px){.gear-grid{grid-template-columns:1fr}}
