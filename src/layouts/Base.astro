@@ -1,0 +1,7 @@
+---
+import '../styles/global.css';
+const {title='GEAR Moto Foundation',description='Protect the Ride. Support the Rider.'}=Astro.props;
+const path=Astro.url.pathname;
+const links=[['/','Home'],['/about/','About'],['/programs/','Programs'],['/get-help/','Get Help'],['/contact/','Contact']];
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content={description}/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><title>{title} | GEAR Moto Foundation</title></head><body><header class="header"><div class="nav wrap"><a href="/" aria-label="GEAR Moto Foundation home"><img src="/brand/gear-wordmark-white.svg" alt="GEAR Moto Foundation"/></a><nav class="navlinks" aria-label="Main navigation">{links.map(([href,label])=><a href={href} aria-current={path===href?'page':undefined}>{label}</a>)}<a class="btn btn-red" href="/donate/">Support the Mission</a></nav></div></header><main><slot/></main><footer class="site-footer"><div class="wrap footer-inner"><a href="/"><img src="/brand/gear-wordmark-white.svg" alt="GEAR Moto Foundation"/></a><span class="muted">Protect the Ride. Support the Rider.</span></div></footer></body></html>
