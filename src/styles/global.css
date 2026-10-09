@@ -67,3 +67,10 @@ h6{font-size:17px;font-weight:600}
 @media(max-width:1000px){.gear-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:780px){.footer-mission{align-items:flex-start}}
 @media(max-width:520px){.gear-grid{grid-template-columns:1fr}}
+
+/* Official uploaded G E A R imagery used with each program pillar */
+.pillar-image{display:block;width:110px;height:96px;max-width:100%;object-fit:contain;object-position:left center}
+.program-pillar{display:flex;align-items:center;gap:18px;margin-top:44px;color:var(--gear-primary);font-weight:800;text-transform:uppercase;letter-spacing:.16em}
+.program-pillar img{width:100px;height:90px;object-fit:contain;object-position:left center;flex-shrink:0}
+.program-pillar+h2{margin-top:8px}
+@media(max-width:520px){.program-pillar img{width:76px;height:72px}}
