@@ -1,23 +1,17 @@
 # Website decision log
 
-## Confirmed from WestHost DNS Troubleshooting and foundation planning
-- Hosting: WestHost cPanel with WordPress.
+## Current confirmed direction (2026-10-09)
+- Hosting and CMS: WestHost cPanel and WordPress.
+- Theme: **Astra** parent plus custom **GEAR Moto Foundation child theme**. This explicitly supersedes Blocksy.
 - Domain: gearmotofoundation.org.
-- WordPress theme: Blocksy; a child theme is preferable to editing parent theme files.
-- Design direction: a simple high-contrast color-block hero instead of an industrial-shed image.
-- New WordPress photographs: JPG format and smaller than 2 MB.
-- GitHub: public repository gear-moto-foundation/gear-moto-foundation.
-- Program pillars: gear access, motorcycle education, accident-related support.
+- Use the existing uploaded GEAR logos (main, white, black and G/E/A/R marks).
+- Use the supplied rider-at-sunset hero photograph; optimized JPG is under 2 MB.
+- Homepage message: GEAR UP. TRAIN SMART. RECOVER STRONG.
+- Palette: charcoal, red, white. Typography: Barlow Condensed and Inter.
+- Program focus: protective gear, rider education and recovery support (program operations still in development).
 
-## Draft implementation choices for first pass
-- Brand palette: charcoal #111820 / red #D71920 / white.
-- Headline: GEAR UP. TRAIN SMART. RECOVER STRONG.
-- Type: Barlow Condensed for headings, Inter for body.
-- Main pages: Home, About, Programs, Get Help, Donate, Contact.
-
-## Unresolved – no invented answers
-- Approved logo and brand files (not yet checked into repository).
-- Final wording of eligibility, program exclusions, and sanctioned-event policy.
-- Nonprofit registration and IRS tax-exempt status.
-- Donation processor, sponsor terms and contact email.
-- Whether GitHub will be used only for source control or also for deployment.
+## Unresolved
+- Formal eligibility/exclusions, medical funding terms and sanctioned-event exceptions.
+- Nonprofit and IRS tax status, donation processor, confirmed contact information.
+- Live WordPress verification; GitHub does not deploy automatically.
+- Binary PNG/JPG image commits to GitHub, still available in separate deliverable ZIP.
