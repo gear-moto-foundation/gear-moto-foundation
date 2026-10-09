@@ -1,0 +1,39 @@
+name: Validate Astro static website
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Compile static pages
+        run: npm run build
+      - name: Validate output
+        run: |
+          test -f dist/index.html
+          test -f dist/about/index.html
+          test -f dist/programs/index.html
+          test -f dist/get-help/index.html
+          test -f dist/contact/index.html
+          test -f dist/donate/index.html
+          test -f dist/brand/gear-wordmark-white.svg
+          test -f dist/brand/gear-e.svg
+      - name: Upload deployable static website
+        uses: actions/upload-artifact@v4
+        with:
+          name: gear-moto-foundation-static-dist
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
