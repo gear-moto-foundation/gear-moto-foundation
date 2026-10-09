@@ -1,3 +1,56 @@
-:root{--ink:#111820;--ink2:#0b1118;--red:#ff123c;--text:#202934;--light:#f4f5f7}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--text);font:400 16px/1.65 Inter,system-ui,sans-serif}a{color:inherit}a:focus-visible{outline:3px solid #ffb900;outline-offset:4px}h1,h2,h3{font-family:'Barlow Condensed',Impact,sans-serif;line-height:.97;text-transform:uppercase;letter-spacing:.01em}h1{font-size:clamp(4rem,8.5vw,8rem);margin:.4em 0 .25em}h2{font-size:clamp(2.7rem,6vw,5.3rem);margin:0 0 22px}.wrap{max-width:1230px;padding:0 25px;margin:auto}.header{background:var(--ink2);color:#fff}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:13px;padding-bottom:13px}.nav img{height:64px;width:auto;max-width:240px;object-fit:contain}.navlinks{display:flex;align-items:center;gap:22px;flex-wrap:wrap}.navlinks a{text-decoration:none;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}.navlinks a:hover{text-decoration:underline}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 24px;border:2px solid #fff;text-decoration:none;font-size:13px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:#fff;border-radius:2px}.btn-red{background:var(--red);border-color:var(--red)}.hero{background:linear-gradient(100deg,rgba(10,16,23,.95),rgba(10,16,23,.68) 55%,rgba(10,16,23,.2)),url('/images/GEAR_Cover.png') center right/cover no-repeat,#111820;color:#fff}.hero-in{padding-top:clamp(70px,11vw,140px);padding-bottom:clamp(90px,13vw,150px)}.hero-logo{width:min(480px,85vw);max-height:165px;object-fit:contain;object-position:left;margin-bottom:22px}.eyebrow{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.2em}.hero h1 span{display:block}.accent{color:#ff3658}.hero p{max-width:650px;font-size:18px;color:#e8edf0}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}.section{padding:clamp(65px,8vw,110px) 0}.lede{font-size:18px;max-width:750px;color:#52606c}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:42px}.card{border-top:5px solid var(--red);padding:30px;background:var(--light)}.card img{width:72px;height:72px;object-fit:contain;object-position:left}.card h3{font-size:35px;margin:16px 0}.card p{margin:0;color:#424e5a}.dark{background:var(--ink);color:#fff}.dark .lede{color:#d9e0e7}.dark-logo{width:min(420px,90%)}.inner-hero{background:var(--ink);color:#fff;padding:85px 0}.inner-hero h1{font-size:clamp(3.8rem,8vw,6.8rem)}.prose{max-width:850px}.prose h2{font-size:3.2rem;margin-top:40px}.site-footer{background:#070b10;color:#e6ebef;padding:36px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}.footer-inner img{max-width:245px}.muted{font-size:13px;color:#aeb9c5}.notice{padding:16px 25px;background:#fff1f2;color:#722c3d;font-size:13px}@media(max-width:780px){.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:15px}.cards{grid-template-columns:1fr}.hero{background-position:63% center}.hero-in{padding-top:70px}}
-/* Original GEAR art stays in public/images. */
-.hero-logo{width:min(560px,92vw);max-height:200px}.nav img{max-width:290px}.card img{width:90px;height:90px}
+/* GEAR Moto Foundation — approved design system */
+:root {
+  --gear-primary:#D71920;
+  --gear-secondary:#A80F15;
+  --gear-text:#343A40;
+  --gear-heading:#111820;
+  --gear-link:#D71920;
+  --gear-link-hover:#A80F15;
+  --gear-border:#E7EAED;
+  --gear-light:#F4F5F6;
+  --gear-white:#FFFFFF;
+  --ink:var(--gear-heading);--ink2:#111820;--red:var(--gear-primary);
+  --text:var(--gear-text);--light:var(--gear-light);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--gear-white);color:var(--gear-text);font:400 16px/1.65 Inter,system-ui,sans-serif}
+a{color:var(--gear-link)}a:hover{color:var(--gear-link-hover)}a:focus-visible{outline:3px solid var(--gear-primary);outline-offset:4px}
+h1,h2,h3,h4,h5,h6{font-family:'Barlow Condensed',Impact,sans-serif;line-height:1.05;color:var(--gear-heading);letter-spacing:.01em}
+h1{font-size:64px;font-weight:800;margin:.4em 0 .25em}
+h2{font-size:44px;font-weight:700;margin:0 0 22px}
+h3{font-size:32px;font-weight:700}
+h4{font-size:26px;font-weight:600}
+h5{font-size:21px;font-weight:600}
+h6{font-size:17px;font-weight:600}
+.wrap{max-width:1230px;padding:0 25px;margin:auto}
+.header{background:var(--gear-heading);color:var(--gear-white)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:13px;padding-bottom:13px}
+.nav img{height:64px;width:auto;max-width:290px;object-fit:contain}
+.navlinks{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.navlinks a{color:#fff;text-decoration:none;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+.navlinks a:hover{color:#ffb8bc;text-decoration:underline}
+.navlinks a[aria-current="page"]{text-decoration:underline;text-decoration-color:var(--gear-primary);text-underline-offset:5px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 24px;border:2px solid #fff;text-decoration:none;font-size:13px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:#fff;border-radius:2px;transition:background-color .15s,border-color .15s}
+.btn:hover{background:var(--gear-secondary);border-color:var(--gear-secondary);color:#fff}
+.btn-red{background:var(--gear-primary);border-color:var(--gear-primary)}
+.hero{background:linear-gradient(100deg,rgba(17,24,32,.95),rgba(17,24,32,.68) 55%,rgba(17,24,32,.2)),url('/images/GEAR_Cover.png') center right/cover no-repeat,var(--gear-heading);color:#fff}
+.hero-in{padding-top:clamp(70px,11vw,140px);padding-bottom:clamp(90px,13vw,150px)}
+.hero-logo{width:min(560px,92vw);max-height:200px;object-fit:contain;object-position:left;margin-bottom:22px}
+.eyebrow{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.2em}
+.hero h1 span{display:block}.hero h1,.inner-hero h1,.dark h2{color:#fff}
+.accent{color:var(--gear-primary)}.hero p{max-width:650px;font-size:18px;color:#e8edf0}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.section{padding:clamp(65px,8vw,110px) 0}
+.lede{font-size:18px;max-width:750px;color:var(--gear-text)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:42px}
+.card{border-top:5px solid var(--gear-primary);border-left:1px solid var(--gear-border);border-right:1px solid var(--gear-border);border-bottom:1px solid var(--gear-border);padding:30px;background:var(--gear-light)}
+.card img{width:90px;height:90px;object-fit:contain;object-position:left}
+.card h3{margin:16px 0}.card p{margin:0;color:var(--gear-text)}
+.dark{background:var(--gear-heading);color:#fff}.dark .lede{color:#e5e8eb}.dark-logo{width:min(420px,90%)}
+.inner-hero{background:var(--gear-heading);color:#fff;padding:85px 0}
+.prose{max-width:850px}.prose h2{margin-top:40px}
+.site-footer{background:var(--gear-heading);color:#fff;padding:36px 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer-inner img{max-width:245px}.muted{font-size:13px;color:#dce0e4}
+.notice{padding:16px 25px;background:var(--gear-light);color:var(--gear-text);font-size:13px;border-top:1px solid var(--gear-border)}
+@media(max-width:780px){.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:15px}.cards{grid-template-columns:1fr}.hero{background-position:63% center}.hero-in{padding-top:70px}h1{font-size:clamp(40px,9vw,64px)}h2{font-size:clamp(32px,7vw,44px)}h3{font-size:clamp(26px,6vw,32px)}}
