@@ -33,7 +33,7 @@ h6{font-size:17px;font-weight:600}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 24px;border:2px solid #fff;text-decoration:none;font-size:13px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:#fff;border-radius:2px;transition:background-color .15s,border-color .15s}
 .btn:hover{background:var(--gear-secondary);border-color:var(--gear-secondary);color:#fff}
 .btn-red{background:var(--gear-primary);border-color:var(--gear-primary)}
-.hero{background:linear-gradient(100deg,rgba(17,24,32,.95),rgba(17,24,32,.68) 55%,rgba(17,24,32,.2)),url('/images/GEAR_Cover.png') center right/cover no-repeat,var(--gear-heading);color:#fff}
+.hero{background:linear-gradient(100deg,rgba(17,24,32,.95),rgba(17,24,32,.68) 55%,rgba(17,24,32,.2)),url('/images/gear-rider-sunset.png') center right/cover no-repeat,var(--gear-heading);color:#fff}
 .hero-in{padding-top:clamp(70px,11vw,140px);padding-bottom:clamp(90px,13vw,150px)}
 .hero-logo{width:min(560px,92vw);max-height:200px;object-fit:contain;object-position:left;margin-bottom:22px}
 .eyebrow{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.2em}
