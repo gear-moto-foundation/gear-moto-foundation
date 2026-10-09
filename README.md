@@ -1,20 +1,21 @@
 # GEAR Moto Foundation
 **Protect the Ride. Support the Rider.**
 
-Website materials for https://gearmotofoundation.org, developed for the existing WestHost WordPress installation.
+Website source for https://gearmotofoundation.org. The site remains on **WordPress / WestHost**, now using the **Astra** parent theme with a custom GEAR child theme (Blocksy has been superseded).
 
-## Website direction
-- **Hero:** GEAR UP. TRAIN SMART. RECOVER STRONG.
-- **Programs:** Safety gear assistance, rider education, and accident recovery support.
-- **Navigation:** Home, About, Programs, Get Help, Contact; prominent Donate link.
-- **Visual direction:** charcoal #111820, red #D71920, white #FFFFFF; Barlow Condensed headings and Inter body font.
-- **Hero treatment:** color block rather than stock or workshop photography.
-- **Assets:** JPG under 2 MB when uploading photos to WordPress.
+## Brand and programs
+- Approved GEAR logos and rider-at-sunset imagery
+- Hero: **GEAR UP. TRAIN SMART. RECOVER STRONG.**
+- Protective gear, rider education, and accident recovery assistance (programs in development)
+- Brand direction: charcoal, red, white; Barlow Condensed and Inter
 
-## Structure
-- `wordpress/gear-moto-child/` – installable Blocksy child theme.
-- `content/` – editable Gutenberg-ready site copy.
-- `preview/` – standalone HTML preview.
-- `docs/` – decisions, hosting guidance, and launch checklist.
+## Project structure
+- `wordpress/gear-moto-astra-child/` — Astra child theme source (`Template: astra`), homepage shortcode `[gear_homepage]`
+- `assets/brand/` — available web SVG versions of GEAR marks
+- `preview/` — standalone HTML preview
+- `content/` — draft page copy
+- `docs/WESTHOST-DEPLOYMENT.md` — instructions
 
-**Launch status:** Draft project. Do not represent tax-exempt status, donation processing, program eligibility, or applications as active until verified. Never commit WestHost credentials, tokens, WordPress secrets, or personal client information.
+The installable ZIP distributed separately includes original GEAR PNG logos and the optimized motorcycle sunset JPG; **binary media files are not yet committed into this GitHub repository**.
+
+**Status:** Draft. Donations, applications, legal/tax claims and eligibility require formal approval before publishing. Do not commit secrets or login tokens.
