@@ -1,0 +1,28 @@
+/*
+Theme Name: GEAR Moto Foundation Child
+Theme URI: https://gearmotofoundation.org
+Description: GEAR Moto Foundation styling for the Blocksy parent theme.
+Author: GEAR Moto Foundation
+Template: blocksy
+Version: 0.1.0
+Text Domain: gear-moto-child
+*/
+:root{--gear-ink:#111820;--gear-red:#d71920;--gear-paper:#fff;--gear-muted:#e7e9eb}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+h1,h2,h3,h4,.entry-title{font-family:"Barlow Condensed",Impact,sans-serif;font-weight:800;letter-spacing:.018em;text-transform:uppercase}
+.gear-hero{background:var(--gear-ink);color:#fff;padding:clamp(4rem,9vw,9rem) clamp(1.25rem,5vw,5rem)}
+.gear-hero h1{font-size:clamp(3.5rem,10vw,8rem);line-height:.94;color:#fff;margin:0 0 1.5rem;max-width:900px}
+.gear-hero h1 em{font-style:normal;color:#ef4549}
+.gear-hero p{font-size:clamp(1.05rem,2vw,1.35rem);max-width:650px}
+.gear-eyebrow{font-size:.8rem;letter-spacing:.18em;font-weight:800;text-transform:uppercase;color:#fff}
+.gear-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.gear-button{display:inline-flex;align-items:center;justify-content:center;border-radius:3px;padding:.85rem 1.5rem;border:2px solid #fff;font-weight:800;text-decoration:none;color:#fff;min-height:48px}
+.gear-button-primary{background:var(--gear-red);border-color:var(--gear-red);color:#fff}
+.gear-button:focus-visible{outline:3px solid #f6b641;outline-offset:3px}
+.gear-section{padding:clamp(3rem,7vw,6rem) clamp(1.25rem,5vw,5rem)}
+.gear-section h2{font-size:clamp(2.5rem,5vw,4rem)}
+.gear-programs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.gear-program{border-top:5px solid var(--gear-red);background:#f2f3f4;padding:2rem;color:var(--gear-ink)}
+.gear-program h3{font-size:2rem;margin:0 0 .7rem}
+.gear-disclaimer{font-size:.875rem;color:#52606d}
+@media(max-width:780px){.gear-programs{grid-template-columns:1fr}.gear-hero{padding-top:4rem;padding-bottom:4rem}}
