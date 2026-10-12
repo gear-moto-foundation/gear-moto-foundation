@@ -1,6 +1,52 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Contact" description="Contact GEAR Moto Foundation for general inquiries, partnerships, event hosting and community involvement.">
-<section class="inner-hero"><div class="wrap"><div class="eyebrow">Start a Conversation</div><h1>Get in Touch.<br/><span class="accent">Get in GEAR.</span></h1></div></section>
-<section class="section"><div class="wrap prose"><h2>One Foundation. Many Ways to Connect.</h2><p>Whether you're a rider, training provider, shop, potential sponsor, event host or community volunteer, we welcome general inquiries about our developing mission.</p><p><strong>Primary contact:</strong> <a href="mailto:info@gearmotofoundation.org">info@gearmotofoundation.org</a></p><h2>What to Include</h2><p>Tell us whether your interest is partnerships, rider education, gear donations, event hosting, volunteering or general program questions. Please include a way for us to respond.</p><div class="program-callout"><strong>Your privacy matters:</strong> Do not email medical records, accident reports, claim numbers, financial statements or other sensitive application materials. Financial and medical assistance applications are not currently open.</div><div class="actions"><a class="btn btn-red" href="mailto:info@gearmotofoundation.org?subject=GEAR%20Moto%20Foundation%20Inquiry">Email GEAR</a></div></div></section></Base>
+<Base title="Contact" description="Contact GEAR Moto Foundation for partnerships, events, volunteering, rider education and general inquiries.">
+<section class="inner-hero"><div class="wrap"><div class="eyebrow">Let's Connect</div><h1>GET IN TOUCH.<br/><span class="accent">GET IN GEAR.</span></h1><p class="lede" style="color:#e5e8eb">Questions, ideas, or an opportunity to make a difference? We'd like to hear from you.</p></div></section>
+<section class="section"><div class="wrap contact-layout">
+  <div class="contact-panel">
+    <div class="eyebrow accent">Send a Message</div><h2>Start a Conversation.</h2>
+    <p>Complete the form and our team will follow up as we're able. Fields marked * are required.</p>
+    <form id="gear-contact-form" class="gear-contact-form" method="post" action="/api/contact" novalidate>
+      <div class="contact-fields">
+        <div class="contact-field"><label for="contact-name">Full Name *</label><input id="contact-name" name="name" type="text" autocomplete="name" maxlength="120" required /></div>
+        <div class="contact-field"><label for="contact-email">Email Address *</label><input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required /></div>
+        <div class="contact-field"><label for="contact-phone">Phone (optional)</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" /></div>
+        <div class="contact-field"><label for="contact-topic">How Can We Help? *</label><select id="contact-topic" name="topic" required><option value="">Choose a topic</option><option value="General inquiry">General Inquiry</option><option value="Corporate sponsorship">Corporate Sponsorship</option><option value="Community partnership">Community Partnership</option><option value="Events">Events &amp; Hosting</option><option value="Volunteering">Volunteering</option><option value="Gear and education">Gear &amp; Rider Education</option><option value="Program information">Program Information</option><option value="Media">Media Inquiry</option></select></div>
+      </div>
+      <div class="contact-field"><label for="contact-message">Your Message *</label><textarea id="contact-message" name="message" rows="6" minlength="10" maxlength="4000" required placeholder="Tell us a little about what you'd like to discuss."></textarea></div>
+      <div class="form-honeypot" aria-hidden="true"><label for="contact-website">Leave this field blank</label><input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off"/></div>
+      <p class="contact-privacy"><strong>Privacy:</strong> Please don't include medical records, accident reports, account numbers or other sensitive personal information. Rider assistance applications are not yet open.</p>
+      <button class="btn btn-red contact-submit" type="submit">Send Message <span aria-hidden="true">→</span></button>
+      <p id="contact-feedback" class="contact-feedback" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+  <aside class="contact-side"><div class="eyebrow">Direct Contact</div><h2>Let's Build a Stronger Riding Community.</h2><p>We're developing partnerships, community events and programs supporting riders across all four GEAR pillars.</p><div class="contact-email-block"><span>Email</span><a href="mailto:info@gearmotofoundation.org">info@gearmotofoundation.org</a></div><hr/><h3>All Bikes. All Riders.</h3><p>Gear. Education. Assistance. Recovery.</p><p class="contact-aside-note">Illustrative programs and partnership opportunities are in development. We cannot accept or process assistance applications through this contact form.</p></aside>
+</div></section>
+<script is:inline>
+  (() => {
+    const form = document.getElementById('gear-contact-form');
+    const feedback = document.getElementById('contact-feedback');
+    if (!form || !feedback) return;
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+      feedback.textContent = 'Sending your message…';
+      feedback.dataset.state = '';
+      try {
+        const response = await fetch(form.action, {method:'POST', body: new FormData(form), headers:{'Accept':'application/json'}});
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(payload.error || 'Your message could not be sent. Please try again.');
+        feedback.textContent = 'Thank you. Your message has been sent to GEAR Moto Foundation.';
+        feedback.dataset.state = 'success';
+        form.reset();
+      } catch (error) {
+        feedback.textContent = error instanceof Error ? error.message : 'Unable to send. Please email info@gearmotofoundation.org.';
+        feedback.dataset.state = 'error';
+      } finally {button.disabled = false;}
+    });
+  })();
+</script>
+</Base>
