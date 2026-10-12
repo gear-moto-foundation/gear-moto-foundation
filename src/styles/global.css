@@ -302,3 +302,17 @@ html{scroll-padding-top:110px}
 .gear-event-concept-cards>.card p{font-size:14px;line-height:1.6;margin:0}
 @media(max-width:800px){.gear-event-concept-cards>.card{flex-basis:calc((100% - 18px)/2)}}
 @media(max-width:520px){.gear-event-concept-cards{gap:12px}.gear-event-concept-cards>.card{flex-basis:100%;padding:19px 20px}.gear-event-concept-cards>.card h3{font-size:27px}}
+
+/* Compact symmetrical informational tiles on partner and volunteer pages */
+.cards.gear-balanced-four,
+.cards.gear-balanced-three{display:grid;gap:16px;margin-top:28px;align-items:stretch}
+.cards.gear-balanced-four{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cards.gear-balanced-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cards.gear-balanced-four>.card,
+.cards.gear-balanced-three>.card{min-width:0;min-height:0;margin:0;padding:22px 24px 20px}
+.cards.gear-balanced-four>.card h3,
+.cards.gear-balanced-three>.card h3{font-size:clamp(26px,2.6vw,31px);line-height:1.12;margin:0 0 11px}
+.cards.gear-balanced-four>.card p,
+.cards.gear-balanced-three>.card p{font-size:14px;line-height:1.62;margin:0}
+@media(max-width:800px){.cards.gear-balanced-three{grid-template-columns:repeat(2,minmax(0,1fr))}.cards.gear-balanced-three>.card:last-child:nth-child(odd){grid-column:1/-1;max-width:calc(50% - 8px);width:100%;justify-self:center}}
+@media(max-width:560px){.cards.gear-balanced-four,.cards.gear-balanced-three{grid-template-columns:1fr;gap:12px}.cards.gear-balanced-three>.card:last-child:nth-child(odd){grid-column:auto;max-width:none}.cards.gear-balanced-four>.card,.cards.gear-balanced-three>.card{padding:19px 20px}}
