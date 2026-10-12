@@ -19,14 +19,14 @@ export async function onRequestPost({request,env}) {
   if(!values.name||values.name.length>LIMITS.name||values.email.length>LIMITS.email||!/^\S+@\S+\.\S+$/.test(values.email)||values.phone.length>LIMITS.phone||!topics.has(values.topic)||values.message.length<10||values.message.length>LIMITS.message){
     return respond({error:'Please complete all required fields with valid information.'},400);
   }
-  if(!env.RESEND_API_KEY||!env.CONTACT_FROM_EMAIL) return respond({error:'Our contact form is being configured. Please email info@gearmotofoundation.org directly.'},503);
   const destination=values.topic==='Shop inquiry'?'shop@gearmotofoundation.org':values.topic==='Giving inquiry'?'donate@gearmotofoundation.org':'info@gearmotofoundation.org';
+  if(!env.RESEND_API_KEY||!env.CONTACT_FROM_EMAIL) return respond({error:'The contact form is being configured. Please email '+destination+' directly.'},503);
   const text=['New GEAR Moto Foundation contact submission','Name: '+values.name,'Email: '+values.email,'Phone: '+(values.phone||'Not provided'),'Topic: '+values.topic,'','Message:',values.message].join('\n');
   const rows=Object.entries(values).map(([k,v])=>'<tr><th style="text-align:left;padding:8px;border-bottom:1px solid #ddd">'+escapeHtml(k)+'</th><td style="padding:8px;border-bottom:1px solid #ddd;white-space:pre-wrap">'+escapeHtml(v)+'</td></tr>').join('');
   let provider;
   try{
     provider=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:'Bearer '+env.RESEND_API_KEY,'Content-Type':'application/json'},body:JSON.stringify({from:env.CONTACT_FROM_EMAIL,to:[destination],reply_to:values.email,subject:'GEAR Contact: '+values.topic,text,html:'<h2>New website inquiry</h2><table>'+rows+'</table>'})});
-  }catch{return respond({error:'Message delivery is temporarily unavailable. Please email us directly.'},502);}
+  }catch{return respond({error:'Message delivery is temporarily unavailable. Please email '+destination+' directly.'},502);}
   if(!provider.ok)return respond({error:'Message delivery is temporarily unavailable. Please email us directly.'},502);
   return respond({ok:true},200);
 }
