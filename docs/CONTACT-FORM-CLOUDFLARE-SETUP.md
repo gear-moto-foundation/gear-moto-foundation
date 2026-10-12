@@ -27,3 +27,7 @@ The existing site is configured for Astro **static output**. Cloudflare Pages Fu
 ## Dedicated merchandise mailbox
 
 The merchandise showcase links directly to `shop@gearmotofoundation.org` using the visitor's mail application. The general contact form also has a **Shop & Merchandise** topic; the server endpoint routes that specific topic to the shop mailbox. Foundation topics continue routing to `info@gearmotofoundation.org`. These are routing changes only—not proof that Resend is activated. Shop checkout, automated receipts, shipping confirmations and transactional email are still pending a live commerce provider.
+
+## Giving inquiry routing
+
+The Giving & Donations topic on the public contact form routes to `donate@gearmotofoundation.org` after Resend is configured and deployed. General foundation and shop requests continue to their respective mailboxes. The Donate page offers a direct email link to this address for questions. This does not activate donations or establish tax-deductible status. Test all three topics after deployment.
