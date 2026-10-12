@@ -452,3 +452,6 @@ figure.editorial-photo figcaption{max-width:100%;text-align:left}
 @media(max-width:850px){.impact-principles{grid-template-columns:repeat(2,minmax(0,1fr))}.impact-lead-grid{grid-template-columns:1fr}.impact-lead .impact-image{max-width:750px}}
 @media(max-width:700px){.impact-section-heading{flex-direction:column;align-items:start}.impact-story,.impact-report-grid{grid-template-columns:1fr}.impact-story:nth-of-type(even) .impact-story-image,.impact-story:nth-of-type(even) .impact-story-content{grid-column:auto;grid-row:auto}.impact-story-image{grid-row:2!important;grid-column:auto!important}.impact-story-content{grid-row:1!important;grid-column:auto!important}.impact-jump-nav{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:460px){.impact-principles{grid-template-columns:1fr}.impact-lead h1{font-size:clamp(50px,13vw,70px)}}
+
+/* Proposed retail prices for upcoming GEAR merchandise */
+.shop-product-price{display:block;font-family:'Barlow Condensed',Impact,sans-serif;font-size:30px;font-weight:800;line-height:1.15;color:#111820;margin:0 0 10px}
