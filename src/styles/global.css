@@ -202,3 +202,17 @@ html{scroll-padding-top:110px}
 /* Shop and foundation mailbox distinction */
 .footer-shop-tag{font-size:10px;color:#aeb8be;margin-left:4px;text-transform:uppercase;letter-spacing:.05em}
 .shop-email-note{font-size:14px;margin:0;color:#3a434b}.shop-email-note a{font-weight:700;overflow-wrap:anywhere}
+
+/* Contact routing cards: clear department selection above general form */
+.department-intro{max-width:750px;margin-bottom:24px}
+.department-intro h2{font-size:clamp(36px,5vw,58px);margin:12px 0}
+.department-intro p{font-size:16px}
+.department-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:26px 0 68px}
+.department-card{display:flex;flex-direction:column;min-width:0;padding:27px;background:#f0f2f3;border-top:4px solid #cf1a24;color:#111820;text-decoration:none;transition:background .18s,transform .18s}
+.department-card:hover{background:#e4e9ec;color:#111820;transform:translateY(-3px)}
+.department-card>span{font-size:10px;font-weight:800;color:#bf1720;letter-spacing:.13em}
+.department-card h3{font-size:32px;margin:24px 0 8px}
+.department-card p{font-size:13px;line-height:1.6;flex:1;margin:0 0 22px}
+.department-card strong{font-size:12px;overflow-wrap:anywhere}
+@media(max-width:850px){.department-grid{grid-template-columns:1fr;gap:12px;margin-bottom:50px}.department-card h3{margin:12px 0 8px}}
+@media(prefers-reduced-motion:reduce){.department-card{transition:none}.department-card:hover{transform:none}}
