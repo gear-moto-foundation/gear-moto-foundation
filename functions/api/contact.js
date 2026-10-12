@@ -2,7 +2,7 @@
 // Requires RESEND_API_KEY and CONTACT_FROM_EMAIL set in Cloudflare Pages environment settings.
 // Verify the sender domain with Resend before enabling delivery.
 const LIMITS = {name:120,email:254,phone:40,topic:80,message:4000};
-const topics=new Set(['General inquiry','Corporate sponsorship','Community partnership','Events','Volunteering','Gear and education','Program information','Media','Shop inquiry','Giving inquiry']);
+const topics=new Set(['General inquiry','Corporate sponsorship','Community partnership','Events','Volunteering','Gear and education','Program information','Assistance inquiry','Media','Shop inquiry','Giving inquiry']);
 const clean=(value,max)=>String(value??'').trim().slice(0,max+1);
 const respond=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
 const escapeHtml=(value)=>String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -19,7 +19,7 @@ export async function onRequestPost({request,env}) {
   if(!values.name||values.name.length>LIMITS.name||values.email.length>LIMITS.email||!/^\S+@\S+\.\S+$/.test(values.email)||values.phone.length>LIMITS.phone||!topics.has(values.topic)||values.message.length<10||values.message.length>LIMITS.message){
     return respond({error:'Please complete all required fields with valid information.'},400);
   }
-  const destination=(values.topic==='Corporate sponsorship'||values.topic==='Community partnership')?'partner@gearmotofoundation.org':values.topic==='Shop inquiry'?'shop@gearmotofoundation.org':values.topic==='Giving inquiry'?'donate@gearmotofoundation.org':'info@gearmotofoundation.org';
+  const destination=(values.topic==='Corporate sponsorship'||values.topic==='Community partnership')?'partner@gearmotofoundation.org':values.topic==='Assistance inquiry'?'assistance@gearmotofoundation.org':values.topic==='Shop inquiry'?'shop@gearmotofoundation.org':values.topic==='Giving inquiry'?'donate@gearmotofoundation.org':'info@gearmotofoundation.org';
   if(!env.RESEND_API_KEY||!env.CONTACT_FROM_EMAIL) return respond({error:'The contact form is being configured. Please email '+destination+' directly.'},503);
   const text=['New GEAR Moto Foundation contact submission','Name: '+values.name,'Email: '+values.email,'Phone: '+(values.phone||'Not provided'),'Topic: '+values.topic,'','Message:',values.message].join('\n');
   const rows=Object.entries(values).map(([k,v])=>'<tr><th style="text-align:left;padding:8px;border-bottom:1px solid #ddd">'+escapeHtml(k)+'</th><td style="padding:8px;border-bottom:1px solid #ddd;white-space:pre-wrap">'+escapeHtml(v)+'</td></tr>').join('');
