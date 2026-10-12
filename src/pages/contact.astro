@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 ---
 <Base title="Contact" description="Contact GEAR Moto Foundation for partnerships, events, volunteering, rider education and general inquiries.">
 <section class="inner-hero"><div class="wrap"><div class="eyebrow">Let's Connect</div><h1>GET IN TOUCH.<br/><span class="accent">GET IN GEAR.</span></h1><p class="lede" style="color:#e5e8eb">Questions, ideas, or an opportunity to make a difference? We'd like to hear from you.</p></div></section>
-<section class="section"><div class="wrap contact-layout">
+<section class="section"><div class="wrap"><div class="department-intro"><span class="section-label">CONTACT THE RIGHT TEAM</span><h2>WHERE SHOULD YOUR MESSAGE GO?</h2><p>Choose the right department for a faster, more relevant response. Each link opens your email application with the recipient and subject ready.</p></div><div class="department-grid"><a class="department-card" href="mailto:info@gearmotofoundation.org?subject=GEAR%20Foundation%20Inquiry"><span>01 / FOUNDATION</span><h3>Programs &amp; General</h3><p>Rider programs, volunteering, events, media, partnerships, and foundation questions.</p><strong>info@gearmotofoundation.org ↗</strong></a><a class="department-card" href="mailto:shop@gearmotofoundation.org?subject=GEAR%20Shop%20Inquiry"><span>02 / MERCHANDISE</span><h3>Shop GEAR</h3><p>Merchandise designs, sizing, future orders, wholesale and shop partnerships.</p><strong>shop@gearmotofoundation.org ↗</strong></a><a class="department-card" href="mailto:donate@gearmotofoundation.org?subject=GEAR%20Giving%20Inquiry"><span>03 / GIVING</span><h3>Donors &amp; Giving</h3><p>Future giving opportunities, donor relations and fundraising inquiries. Online donations are not open yet.</p><strong>donate@gearmotofoundation.org ↗</strong></a></div></div><div class="wrap contact-layout">
   <div class="contact-panel">
     <div class="eyebrow accent">Send a Message</div><h2>Start a Conversation.</h2>
     <p>Complete the form and our team will follow up as we're able. Fields marked * are required.</p>
@@ -27,6 +27,8 @@ import Base from '../layouts/Base.astro';
   (() => {
     const form = document.getElementById('gear-contact-form');
     const feedback = document.getElementById('contact-feedback');
+    const topic = document.getElementById('contact-topic');
+    const departmentAddress = () => topic?.value === 'Shop inquiry' ? 'shop@gearmotofoundation.org' : topic?.value === 'Giving inquiry' ? 'donate@gearmotofoundation.org' : 'info@gearmotofoundation.org';
     if (!form || !feedback) return;
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
@@ -43,7 +45,7 @@ import Base from '../layouts/Base.astro';
         feedback.dataset.state = 'success';
         form.reset();
       } catch (error) {
-        feedback.textContent = error instanceof Error ? error.message : 'Unable to send. Please email info@gearmotofoundation.org.';
+        feedback.textContent = (error instanceof Error ? error.message : 'Unable to send your message.') + ' Please email ' + departmentAddress() + ' directly.';
         feedback.dataset.state = 'error';
       } finally {button.disabled = false;}
     });
