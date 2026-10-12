@@ -294,3 +294,11 @@ html{scroll-padding-top:110px}
 .gear-calendar-inline .gear-calendar-embed{display:block;width:100%;min-height:650px;border:0}
 .gear-calendar-inline + .actions{margin-top:30px}
 @media(max-width:650px){.gear-calendar-inline{padding-top:22px}.gear-calendar-inline .gear-calendar-embed{min-height:540px}}
+
+/* Balanced five-card community event concepts: compact, centered 3 + 2 */
+.gear-event-concept-cards{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:18px;margin-top:28px}
+.gear-event-concept-cards>.card{box-sizing:border-box;flex:0 1 calc((100% - 36px)/3);min-width:0;padding:23px 24px 21px;min-height:0;margin:0}
+.gear-event-concept-cards>.card h3{font-size:clamp(25px,2.4vw,31px);margin:0 0 12px;line-height:1.1}
+.gear-event-concept-cards>.card p{font-size:14px;line-height:1.6;margin:0}
+@media(max-width:800px){.gear-event-concept-cards>.card{flex-basis:calc((100% - 18px)/2)}}
+@media(max-width:520px){.gear-event-concept-cards{gap:12px}.gear-event-concept-cards>.card{flex-basis:100%;padding:19px 20px}.gear-event-concept-cards>.card h3{font-size:27px}}
