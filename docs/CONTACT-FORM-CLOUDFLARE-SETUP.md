@@ -1,6 +1,6 @@
 # Contact Form — Cloudflare Pages Setup
 
-The contact page uses `POST /api/contact`, implemented as a **Cloudflare Pages Function** at `functions/api/contact.js`. It emails general inquiries to **info@gearmotofoundation.org** using Resend. This is not a third-party hosted form or an email link masquerading as a form.
+The contact page uses `POST /api/contact`, implemented as a **Cloudflare Pages Function** at `functions/api/contact.js`. It sends general foundation inquiries to **info@gearmotofoundation.org** and submissions selecting **Shop & Merchandise** to **shop@gearmotofoundation.org** using Resend. This is not a third-party hosted form or an email link masquerading as a form.
 
 ## Required setup (before the form can deliver messages)
 
@@ -9,7 +9,7 @@ The contact page uses `POST /api/contact`, implemented as a **Cloudflare Pages F
    - `RESEND_API_KEY` — secret API key (encrypt/secret; **never commit to GitHub**).
    - `CONTACT_FROM_EMAIL` — sender address on the **verified sending domain**, e.g. `GEAR Moto Foundation <website@mail.gearmotofoundation.org>`.
 3. Redeploy the Cloudflare Pages project so the Functions runtime reads those variables.
-4. Submit a real test message via `/contact/`. Verify delivery to `info@gearmotofoundation.org`, reply-to, and spam folder. If the API key / sending address is missing or delivery fails, the page displays a clear fallback to direct email rather than a false success.
+4. Submit a real test message via `/contact/`. Test both a general inquiry delivered to `info@gearmotofoundation.org` and a Shop & Merchandise inquiry delivered to `shop@gearmotofoundation.org`, checking reply-to and spam folders. If the API key / sending address is missing or delivery fails, the page displays a clear fallback to direct email rather than a false success.
 5. Configure Cloudflare bot protection and rate-limiting for `/api/contact` (the basic hidden honeypot alone is not sufficient protection from automated spam).
 6. Verify actual production host, routing and deployments. If hosted on **Cloudflare Workers static assets** rather than Pages, Pages Functions won't execute as-is. That deployment needs a compatible Worker route/handler instead.
 7. Consider a published privacy notice and retention policy before launching. Form intentionally does not accept file attachments, medical records, grant applications, financial documents or sensitive case information.
@@ -23,3 +23,7 @@ Name, email, phone (optional), topic, message. Explicit topic allowlist; email p
 **Form UI and server-side source code are committed. Delivery is not operational until Resend and Cloudflare secrets are configured, the site is deployed, and a test succeeds.** No claim of successful email delivery should be made before that.
 
 The existing site is configured for Astro **static output**. Cloudflare Pages Functions are separately deployed from the Astro static `dist` output by Pages. Do not just upload `dist` to another static host and expect `/api/contact` to work.
+
+## Dedicated merchandise mailbox
+
+The merchandise showcase links directly to `shop@gearmotofoundation.org` using the visitor's mail application. The general contact form also has a **Shop & Merchandise** topic; the server endpoint routes that specific topic to the shop mailbox. Foundation topics continue routing to `info@gearmotofoundation.org`. These are routing changes only—not proof that Resend is activated. Shop checkout, automated receipts, shipping confirmations and transactional email are still pending a live commerce provider.
