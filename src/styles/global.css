@@ -198,3 +198,7 @@ html{scroll-padding-top:110px}
 @media(max-width:780px){.shop-hero-inner{grid-template-columns:1fr;gap:0}.shop-hero-art{display:none}.shop-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.shop-purpose-grid{grid-template-columns:1fr;gap:20px}}
 @media(max-width:510px){.shop-product-grid{grid-template-columns:1fr 1fr;gap:15px 9px}.shop-product-info h3{font-size:24px}.shop-product-info p{font-size:12px}.shop-filter{padding:10px 12px;font-size:11px}}
 @media(max-width:380px){.shop-product-grid{grid-template-columns:1fr}}
+
+/* Shop and foundation mailbox distinction */
+.footer-shop-tag{font-size:10px;color:#aeb8be;margin-left:4px;text-transform:uppercase;letter-spacing:.05em}
+.shop-email-note{font-size:14px;margin:0;color:#3a434b}.shop-email-note a{font-weight:700;overflow-wrap:anywhere}
