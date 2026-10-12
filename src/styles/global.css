@@ -320,3 +320,12 @@ html{scroll-padding-top:110px}
 /* Partnership page: exactly four equal columns on desktop */
 @media(min-width:801px){.cards.gear-balanced-four{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(min-width:561px) and (max-width:800px){.cards.gear-balanced-four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Editorial imagery alignment: fill content columns symmetrically, never crop the image */
+figure.editorial-photo{width:100%;max-width:none;margin:26px auto 32px;min-width:0}
+figure.editorial-photo img{display:block;width:100%;max-width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:center;border-radius:3px}
+figure.editorial-photo figcaption{max-width:100%;text-align:left}
+.gear-community-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start;margin:28px 0 34px}
+.gear-community-photo-grid figure.editorial-photo{margin:0}
+.gear-community-photo-grid figure.editorial-photo img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+@media(max-width:720px){.gear-community-photo-grid{grid-template-columns:1fr;gap:24px}}
