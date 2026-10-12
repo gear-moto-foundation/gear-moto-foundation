@@ -255,3 +255,24 @@ html{scroll-padding-top:110px}
 .story-ending-grid .story-inline-art img{max-height:360px}
 .story-final-cta h2{font-size:clamp(45px,5.4vw,76px)}
 @media(max-width:760px){.story-intro-grid,.story-ending-grid{grid-template-columns:1fr}.story-photo-pair{grid-template-columns:1fr;gap:24px}.story-inline-art img,.story-photo-pair img{max-height:none}.story-intro-grid h1{font-size:clamp(42px,8vw,62px)}}
+
+/* Our Story image integrity fix: never crop or cap the image's intrinsic height */
+.story-inline-art,
+.story-photo-pair .story-inline-art,
+.story-ending-grid .story-inline-art {width:100%;max-width:100%;min-width:0;overflow:visible}
+.story-inline-art img,
+.story-photo-pair img,
+.story-ending-grid .story-inline-art img,
+.story-intro-grid .story-inline-art img,
+.story-governance-grid .story-inline-art img {
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  border-radius:4px;
+}
+.story-inline-art figcaption{margin-top:8px}
