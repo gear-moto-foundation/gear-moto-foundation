@@ -31,3 +31,7 @@ The merchandise showcase links directly to `shop@gearmotofoundation.org` using t
 ## Giving inquiry routing
 
 The Giving & Donations topic on the public contact form routes to `donate@gearmotofoundation.org` after Resend is configured and deployed. General foundation and shop requests continue to their respective mailboxes. The Donate page offers a direct email link to this address for questions. This does not activate donations or establish tax-deductible status. Test all three topics after deployment.
+
+## Partners & sponsors
+
+Corporate sponsorship and community partnership form topics route to `partner@gearmotofoundation.org`. The Partners page and shared footer provide direct mailto links. Verify delivery after the email provider is configured.
