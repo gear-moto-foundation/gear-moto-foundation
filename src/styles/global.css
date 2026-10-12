@@ -455,3 +455,57 @@ figure.editorial-photo figcaption{max-width:100%;text-align:left}
 
 /* Proposed retail prices for upcoming GEAR merchandise */
 .shop-product-price{display:block;font-family:'Barlow Condensed',Impact,sans-serif;font-size:30px;font-weight:800;line-height:1.15;color:#111820;margin:0 0 10px}
+
+/* Support the Mission / giving page */
+.give-overline{display:block;font-size:11px;font-weight:800;letter-spacing:.16em;color:#d71920}
+.give-hero{background:#10161b;color:#fff;padding:clamp(55px,7vw,100px) 0}
+.give-hero-grid,.give-feature-grid,.give-trust-grid{display:grid;grid-template-columns:1fr .93fr;gap:clamp(28px,5.5vw,75px);align-items:center}
+.give-hero h1{font-size:clamp(54px,6.4vw,94px);line-height:.92;color:#fff;margin:23px 0}
+.give-hero h1 em,.give-feature h2 em,.give-trust h2 em,.give-close h2 em{font-style:normal;color:#e62932}
+.give-hero p{font-size:17px;color:#dbe1e6;line-height:1.75}
+.give-outline{border-color:#9ca6ae;color:#fff;background:transparent}
+.give-hero-image,.give-feature-image{margin:0;min-width:0}
+.give-hero-image img,.give-feature-image img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;border-radius:3px}
+.give-hero-image figcaption,.give-feature-image figcaption{font-size:11px;line-height:1.5;color:#b2bbc2;margin-top:8px}
+.give-status{background:#d71920;color:#fff;padding:32px 0}
+.give-status-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.give-status .give-overline{color:#ffe0e0}
+.give-status h2{font-size:clamp(28px,3.3vw,45px);color:#fff;margin:10px 0}
+.give-status p{margin:0;font-size:14px;max-width:790px}
+.give-status-link{color:#fff;font-size:12px;font-weight:800;white-space:nowrap;text-underline-offset:5px}
+.give-purpose,.give-pathways{padding:clamp(65px,7vw,105px) 0;background:#f1f3f4}
+.give-section-heading{margin-bottom:32px;max-width:900px}
+.give-section-heading h2,.give-feature h2,.give-trust h2,.give-close h2{font-size:clamp(47px,5.6vw,80px);line-height:.96;margin:15px 0}
+.give-section-heading h2 em{font-style:normal;color:#d71920}
+.give-section-heading p{max-width:680px;line-height:1.75}
+.give-pillar-grid,.give-pathway-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.give-pillar-card{display:flex;flex-direction:column;padding:21px;background:#fff;border-top:4px solid #d71920;min-width:0}
+.give-pillar-head{display:flex;justify-content:space-between;align-items:start;gap:8px}
+.give-pillar-head img{width:70px;height:70px;object-fit:contain}
+.give-pillar-head span,.give-pathway-grid article>span{font-size:10px;font-weight:800;color:#a01820;letter-spacing:.08em}
+.give-pillar-card h3{font-size:38px;margin:16px 0 10px}
+.give-pillar-card p{font-size:13px;line-height:1.7;flex:1}
+.give-pillar-card>a,.give-pathway-grid article>a{font-size:12px;font-weight:800;text-decoration:underline;text-underline-offset:5px}
+.give-feature{padding:clamp(65px,7vw,105px) 0}
+.give-feature p{font-size:15px;line-height:1.8}
+.give-feature-image figcaption{color:#636c75}
+.give-pathways{background:#111820;color:#fff}
+.give-pathways .give-section-heading h2{color:#fff}
+.give-pathway-grid article{padding:22px 10px 15px 0;border-top:3px solid #d71920}
+.give-pathway-grid article>span{color:#ff777f}
+.give-pathway-grid h3{font-size:34px;color:#fff;margin:19px 0 12px}
+.give-pathway-grid p{font-size:13px;line-height:1.7;color:#d1d9df;min-height:140px}
+.give-pathway-grid article>a{color:#fff}
+.give-trust{background:#e9edef;padding:clamp(65px,7vw,105px) 0}
+.give-trust p{line-height:1.75}
+.give-trust-link{font-weight:800;font-size:13px;text-underline-offset:5px}
+.give-trust-panel{background:#fff;border-top:5px solid #d71920;padding:clamp(23px,3vw,40px)}
+.give-trust-panel h3{font-size:35px;margin:0 0 18px}
+.give-trust-panel p{font-size:14px;line-height:1.75}
+.give-close{background:#fff;padding:clamp(65px,8vw,110px) 0}
+.give-close h2{max-width:1000px}
+.give-close> .wrap>p:not(.give-contact){max-width:750px}
+.give-close .give-contact{font-size:13px;margin-top:25px}
+@media(max-width:950px){.give-pillar-grid,.give-pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.give-pathway-grid p{min-height:0}}
+@media(max-width:700px){.give-hero-grid,.give-feature-grid,.give-trust-grid{grid-template-columns:1fr}.give-status-inner{flex-direction:column;align-items:flex-start}.give-hero h1{font-size:clamp(55px,12vw,85px)}}
+@media(max-width:450px){.give-pillar-grid,.give-pathway-grid{grid-template-columns:1fr}.give-pillar-card{padding:20px}.give-pathway-grid{gap:22px}}
