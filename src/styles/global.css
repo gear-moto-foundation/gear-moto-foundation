@@ -509,3 +509,14 @@ figure.editorial-photo figcaption{max-width:100%;text-align:left}
 @media(max-width:950px){.give-pillar-grid,.give-pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.give-pathway-grid p{min-height:0}}
 @media(max-width:700px){.give-hero-grid,.give-feature-grid,.give-trust-grid{grid-template-columns:1fr}.give-status-inner{flex-direction:column;align-items:flex-start}.give-hero h1{font-size:clamp(55px,12vw,85px)}}
 @media(max-width:450px){.give-pillar-grid,.give-pathway-grid{grid-template-columns:1fr}.give-pillar-card{padding:20px}.give-pathway-grid{gap:22px}}
+
+/* Four program icon graphics - entire artwork visible at every breakpoint */
+.gear-program-index-card{padding:19px 19px 23px}
+.gear-program-index-top{flex-direction:column;align-items:stretch;gap:5px}
+.gear-program-index-top img{width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;display:block}
+.gear-program-index-top>span{text-align:right}
+.gear-program-detail-photo{width:100%;max-width:500px;margin-inline:auto}
+.gear-program-detail-photo img{width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;box-shadow:none}
+.gear-program-detail-letter{display:flex;align-items:center;justify-content:center;font:800 34px/1 'Barlow Condensed',Impact,sans-serif;color:#d71920;border:2px solid #d71920;width:46px;height:46px;border-radius:50%}
+@media(max-width:800px){.gear-program-index-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:450px){.gear-program-index-grid{grid-template-columns:1fr}.gear-program-index-top img{max-width:320px;margin:auto}}
