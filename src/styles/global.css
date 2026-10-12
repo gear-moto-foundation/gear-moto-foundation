@@ -107,3 +107,8 @@ h6{font-size:17px;font-weight:600}
 .contact-aside-note{color:#c7d0d7}
 @media(max-width:800px){.contact-layout{grid-template-columns:1fr}}
 @media(max-width:550px){.contact-fields{grid-template-columns:1fr}.contact-side{padding:27px 22px}}
+
+/* Visual storytelling illustrations — display alongside official brand components */
+.brand-visual{max-width:1180px;margin:34px 0 24px}
+.visual-dark figcaption{color:#d1d8dd}
+@media(max-width:700px){.brand-visual img{aspect-ratio:4/3;object-position:center}}
