@@ -2,7 +2,7 @@
 // Requires RESEND_API_KEY and CONTACT_FROM_EMAIL set in Cloudflare Pages environment settings.
 // Verify the sender domain with Resend before enabling delivery.
 const LIMITS = {name:120,email:254,phone:40,topic:80,message:4000};
-const topics=new Set(['General inquiry','Corporate sponsorship','Community partnership','Events','Volunteering','Gear and education','Program information','Media']);
+const topics=new Set(['General inquiry','Corporate sponsorship','Community partnership','Events','Volunteering','Gear and education','Program information','Media','Shop inquiry']);
 const clean=(value,max)=>String(value??'').trim().slice(0,max+1);
 const respond=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
 const escapeHtml=(value)=>String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -20,11 +20,12 @@ export async function onRequestPost({request,env}) {
     return respond({error:'Please complete all required fields with valid information.'},400);
   }
   if(!env.RESEND_API_KEY||!env.CONTACT_FROM_EMAIL) return respond({error:'Our contact form is being configured. Please email info@gearmotofoundation.org directly.'},503);
+  const destination=values.topic==='Shop inquiry'?'shop@gearmotofoundation.org':'info@gearmotofoundation.org';
   const text=['New GEAR Moto Foundation contact submission','Name: '+values.name,'Email: '+values.email,'Phone: '+(values.phone||'Not provided'),'Topic: '+values.topic,'','Message:',values.message].join('\n');
   const rows=Object.entries(values).map(([k,v])=>'<tr><th style="text-align:left;padding:8px;border-bottom:1px solid #ddd">'+escapeHtml(k)+'</th><td style="padding:8px;border-bottom:1px solid #ddd;white-space:pre-wrap">'+escapeHtml(v)+'</td></tr>').join('');
   let provider;
   try{
-    provider=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:'Bearer '+env.RESEND_API_KEY,'Content-Type':'application/json'},body:JSON.stringify({from:env.CONTACT_FROM_EMAIL,to:['info@gearmotofoundation.org'],reply_to:values.email,subject:'GEAR Contact: '+values.topic,text,html:'<h2>New website inquiry</h2><table>'+rows+'</table>'})});
+    provider=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:'Bearer '+env.RESEND_API_KEY,'Content-Type':'application/json'},body:JSON.stringify({from:env.CONTACT_FROM_EMAIL,to:[destination],reply_to:values.email,subject:'GEAR Contact: '+values.topic,text,html:'<h2>New website inquiry</h2><table>'+rows+'</table>'})});
   }catch{return respond({error:'Message delivery is temporarily unavailable. Please email us directly.'},502);}
   if(!provider.ok)return respond({error:'Message delivery is temporarily unavailable. Please email us directly.'},502);
   return respond({ok:true},200);
