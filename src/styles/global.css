@@ -316,3 +316,7 @@ html{scroll-padding-top:110px}
 .cards.gear-balanced-three>.card p{font-size:14px;line-height:1.62;margin:0}
 @media(max-width:800px){.cards.gear-balanced-three{grid-template-columns:repeat(2,minmax(0,1fr))}.cards.gear-balanced-three>.card:last-child:nth-child(odd){grid-column:1/-1;max-width:calc(50% - 8px);width:100%;justify-self:center}}
 @media(max-width:560px){.cards.gear-balanced-four,.cards.gear-balanced-three{grid-template-columns:1fr;gap:12px}.cards.gear-balanced-three>.card:last-child:nth-child(odd){grid-column:auto;max-width:none}.cards.gear-balanced-four>.card,.cards.gear-balanced-three>.card{padding:19px 20px}}
+
+/* Partnership page: exactly four equal columns on desktop */
+@media(min-width:801px){.cards.gear-balanced-four{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(min-width:561px) and (max-width:800px){.cards.gear-balanced-four{grid-template-columns:repeat(2,minmax(0,1fr))}}
