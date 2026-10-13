@@ -1,0 +1,22 @@
+GEAR Moto Foundation | Our Impact | 20-something riders
+
+Four optimized 16:9 JPG images for WordPress; each smaller than 2,000,000 bytes.
+These are illustrative generated images, not photos of actual GEAR beneficiaries or event attendees.
+
+Our Impact hero: gear-moto-foundation-our-impact-young-sportbike-riders-community.jpg
+Suggested alt text: Young adult sportbike riders gather with motorcycles at sunset
+Size: 363,125 bytes
+
+Education: gear-moto-foundation-our-impact-young-rider-safety-education.jpg
+Suggested alt text: Young motorcycle rider participating in an organized skills training session
+Size: 289,155 bytes
+
+Assistance: gear-moto-foundation-our-impact-rider-assistance-resources.jpg
+Suggested alt text: Young motorcycle rider receiving information and assistance at a motorcycle event
+Size: 320,411 bytes
+
+Recovery: gear-moto-foundation-our-impact-injured-rider-recovery-support.jpg
+Suggested alt text: Young motorcycle rider receiving recovery support from friends
+Size: 304,715 bytes
+
+WordPress: Media > Add New; then replace the relevant image blocks on the Our Impact page. Use the suggested alt text only when it accurately describes the displayed image. Confirm placement before publishing.
