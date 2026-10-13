@@ -26,3 +26,8 @@ Check actual live pages on mobile and desktop, validate contact submissions, rev
 - A successful build does not prove the form delivers. Before promoting volunteer signups, test the production Pages Function and Resend sender credentials, verify mailbox receiving, and provide a responsible data-retention workflow.
 - Homepage displays a manually maintained, nonpercentage launch milestone tracker: Mission Blueprint (drafted), Website & Community (in progress), Legal & Governance (official status to verify), Programs & Funding (not open), Launch & Reporting (planned). Never mark incorporation, IRS recognition, a board or active services completed without documentation.
 - Volunteer page uses existing illustrative images; dedicated volunteer photography is pending. Any concept mockups depicting completed incorporation or operations are not factual and must not be used as actual status reports.
+
+## White-background volunteer layout and uploaded images
+- Verified four JPEG assets in public/images/volunteer/ (each under 300 KB) and used them in the redesigned light/white volunteer hero and role cards.
+- Cards retain all six volunteer-interest categories, link to the actual interest form, and preselect the related field. Signup still routes through the existing contact API to volunteer@gearmotofoundation.org; production delivery verification remains outstanding.
+- The photographed scenes are illustrative; published captions must not imply actual GEAR volunteer programs or events have occurred.

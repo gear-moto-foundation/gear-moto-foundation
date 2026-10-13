@@ -1,37 +1,61 @@
 ---
 import Base from '../layouts/Base.astro';
 const opportunities = [
-  {icon:'01',title:'Events & Community',summary:'Help organize future rider meetups, check-in, community tables, route logistics and event-day hospitality.',tags:'Planning • Outreach • Event support'},
-  {icon:'02',title:'Rider Safety & Education',summary:'Support educational outreach and help connect the foundation with qualified instructors and gear partners. No training credentials are assumed.',tags:'Safety • Training partners • Gear access'},
-  {icon:'03',title:'Media & Storytelling',summary:'Photography, video, design, social media, editing and responsible community storytelling.',tags:'Creative • Marketing • Content'},
-  {icon:'04',title:'Outreach & Partnerships',summary:'Introduce GEAR to riders, shops, dealers, community businesses and potential program partners.',tags:'Connections • Sponsors • Relationships'},
-  {icon:'05',title:'Operations & Administration',summary:'Help with coordination, planning, research, communications and organizational logistics as systems are built.',tags:'Organization • Technology • Planning'},
-  {icon:'06',title:'Professional Expertise',summary:'Offer relevant experience in nonprofit governance, accounting, grant design, legal review, safety or healthcare partnerships.',tags:'Governance • Finance • Specialized skills'}
+  {icon:'01',title:'Events & Community',summary:'Help with community events, check-in, local rider connections and future safety outreach.',tags:'Events • Outreach • Hospitality',image:'/images/volunteer/gear-moto-foundation-volunteer-motorcycle-event-support.jpg'},
+  {icon:'02',title:'Rider Safety & Education',summary:'Connect riders with qualified instructors and help plan future safety and protective-gear education.',tags:'Training • Gear • Safety',image:'/images/volunteer/gear-moto-foundation-volunteer-motorcycle-safety-gear.jpg'},
+  {icon:'03',title:'Media & Storytelling',summary:'Bring photography, video, design, writing or social content skills to tell GEAR’s story responsibly.',tags:'Media • Content • Design',image:'/images/volunteer/gear-moto-foundation-volunteer-community-outreach-hero.jpg'},
+  {icon:'04',title:'Outreach & Partnerships',summary:'Introduce the foundation to riders, shops, dealerships, event hosts and community organizations.',tags:'Outreach • Community • Sponsors',image:'/images/volunteer/gear-moto-foundation-volunteer-rider-community-support.jpg'},
+  {icon:'05',title:'Operations & Administration',summary:'Support research, planning, communications, coordination and the systems needed for future programs.',tags:'Planning • Communications • Tech',image:'/images/impact/gear-moto-foundation-our-impact-rider-assistance-resources.jpg'},
+  {icon:'06',title:'Professional Expertise',summary:'Share specialized knowledge in nonprofit operations, accounting, safety, legal review or healthcare partnerships.',tags:'Specialized Skills • Governance',image:'/images/impact/gear-moto-foundation-our-impact-injured-rider-gear.jpg'}
 ];
 ---
 <Base title="Volunteer With GEAR" description="Express interest in volunteering with GEAR Moto Foundation as we build motorcycle safety, rider education, community outreach and recovery support programs.">
-<section class="vol-hero">
-  <img class="vol-hero-photo" src="/images/impact/gear-moto-foundation-our-impact-young-sportbike-riders-community.jpg" alt="" fetchpriority="high"/>
-  <div class="vol-hero-overlay"></div>
-  <div class="wrap vol-hero-inner">
-    <span class="vol-kicker">GEAR MOTO FOUNDATION / VOLUNTEER COMMUNITY</span>
-    <h1>SHOW UP.<br/><em>MAKE IT MATTER.</em></h1>
-    <p>We are looking for the people who want to help build a safer, stronger riding community. Riders, non-riders, builders, creatives and people who simply care—there's room for you.</p>
-    <div class="actions"><a class="btn btn-red" href="#volunteer-interest">Share Your Interest ↗</a><a class="btn hero-outline" href="#volunteer-roles">Ways to Help ↓</a></div>
-    <p class="vol-hero-caption">Illustrative rider-community photograph; not a depiction of an active GEAR volunteer program.</p>
+<section class="vol-white-hero" aria-labelledby="vol-main-heading">
+  <div class="wrap vol-white-hero-grid">
+    <div class="vol-white-hero-content">
+      <span class="vw-eyebrow">GEAR MOTO FOUNDATION / GET INVOLVED</span>
+      <h1 id="vol-main-heading">VOLUNTEER<span>WITH PURPOSE.</span></h1>
+      <h2>Real riders. Real help. Real impact.</h2>
+      <div class="vw-red-rule" aria-hidden="true"></div>
+      <p>Whether you're a rider, creative, organizer or someone who simply cares about people, you can help build a safer, stronger motorcycle community.</p>
+      <p class="vw-hero-stage">We're building our volunteer interest list now. Official opportunities and onboarding are still in development.</p>
+      <div class="actions"><a class="btn btn-red" href="#volunteer-interest">BECOME A GEAR VOLUNTEER ↗</a><a class="vw-secondary-link" href="#volunteer-roles">Explore ways to help ↓</a></div>
+      <span class="vw-mini-slogan">ALL BIKES. ALL RIDERS. <strong>ONE COMMUNITY.</strong></span>
+    </div>
+    <figure class="vw-hero-figure">
+      <img src="/images/volunteer/gear-moto-foundation-volunteer-community-outreach-hero.jpg" fetchpriority="high" alt="Illustrative motorcycle community volunteer scene with riders and protective gear in a mountain setting"/>
+      <figcaption>Illustrative concept art — not a photograph of a GEAR event or active volunteers.</figcaption>
+    </figure>
   </div>
 </section>
-<section class="vol-intro section"><div class="wrap vol-intro-grid"><div><span class="vol-kicker">RIDERS HELPING RIDERS</span><h2>YOU DON'T HAVE TO RIDE<br/><span>TO MAKE A DIFFERENCE.</span></h2></div><div><p>Protective equipment. Better education. Helpful connections. Support after a crash. Our four pillars need people with different skills and experiences to become real.</p><p><strong>We're collecting expressions of interest while the foundation develops.</strong> Formal volunteer positions, event assignments, onboarding and training have not launched. An inquiry is not a commitment or guarantee of placement.</p></div></div></section>
-<section id="volunteer-roles" class="vol-roles section"><div class="wrap">
-  <div class="vol-section-head"><span class="vol-kicker">WHERE YOUR SKILLS COULD HELP</span><h2>BRING WHAT<br/><em>YOU'VE GOT.</em></h2><p>These are potential future opportunities, not currently staffed positions. Select the areas that interest you most.</p></div>
-  <div class="vol-role-grid">{opportunities.map(o=><article class="vol-role-card"><div class="vol-role-number">{o.icon} / 06</div><h3>{o.title}</h3><p>{o.summary}</p><span>{o.tags}</span></article>)}</div>
+<section class="vw-progress-strip" aria-labelledby="vw-stage-title"><div class="wrap vw-progress-inner">
+ <div class="vw-progress-icon" aria-hidden="true">↗</div>
+ <div><span class="vw-eyebrow">OUR CURRENT STAGE</span><h2 id="vw-stage-title">BUILDING THE FOUNDATION.</h2><p>Mission plans drafted • Website &amp; community-building in progress • Legal status and program launch awaiting verification</p></div>
+ <a href="/governance/">See our governance &amp; development status ↗</a>
 </div></section>
-<section class="vol-why"><div class="wrap vol-why-grid"><div><span class="vol-kicker">ALL BIKES. ALL RIDERS.</span><h2>THE COMMUNITY<br/><em>IS THE MISSION.</em></h2><p>Some of the most important work happens before someone rides—and when they need support afterward. Volunteer interest helps us understand who is ready to build that kind of community.</p><a href="/programs/" class="btn btn-outline-dark">Explore Our Four Pillars ↗</a></div><figure><img src="/images/impact/gear-moto-foundation-our-impact-rider-assistance-resources.jpg" alt="Illustrative scene showing motorcycle community volunteers helping a rider review resource information" loading="lazy" decoding="async"/><figcaption>Illustrative concept imagery, not an existing volunteer event.</figcaption></figure></div></section>
-<section class="vol-how section"><div class="wrap"><span class="vol-kicker">SIMPLE FIRST STEPS</span><h2>START WITH<br/><span>A CONVERSATION.</span></h2><div class="vol-how-grid">
-  <article><strong>01</strong><h3>Raise Your Hand</h3><p>Tell us what interests you and what experience you would like to share.</p></article>
-  <article><strong>02</strong><h3>We'll Connect</h3><p>As volunteer roles develop, GEAR can follow up to discuss suitable opportunities.</p></article>
-  <article><strong>03</strong><h3>Build Together</h3><p>Future assignments would follow appropriate onboarding, safety and role requirements.</p></article>
-</div></div></section>
+<section id="volunteer-roles" class="vw-roles" aria-labelledby="vw-roles-title"><div class="wrap">
+  <div class="vw-section-heading"><div><span class="vw-eyebrow">WAYS TO HELP</span><h2 id="vw-roles-title">VOLUNTEERING <span>OPPORTUNITIES.</span></h2></div><p>Every skill has a place in a stronger motorcycle community. These are areas we're exploring, not currently staffed positions.</p></div>
+  <div class="vw-role-grid">
+    {opportunities.map(o=><a class="vw-role-card" href="#volunteer-interest" data-vol-interest={o.title} aria-label={'Express interest in '+o.title}>
+      <div class="vw-role-image"><img src={o.image} alt="" loading="lazy" decoding="async"/><span class="vw-role-number">{o.icon} / 06</span></div>
+      <div class="vw-role-details"><h3>{o.title}</h3><p>{o.summary}</p><div><span>{o.tags}</span><b aria-hidden="true">↗</b></div></div>
+    </a>)}
+  </div>
+  <p class="vw-caption">All images are illustrative; no GEAR volunteer events or services are represented as already operating. Select an area to express interest.</p>
+</div></section>
+<section class="vw-community" aria-labelledby="vw-community-title"><div class="wrap vw-community-grid">
+ <figure><img src="/images/volunteer/gear-moto-foundation-volunteer-rider-community-support.jpg" alt="Illustrative motorcycle community members collaborating on rider support and resources" loading="lazy" decoding="async"/><figcaption>Illustrative volunteer concept</figcaption></figure>
+ <div><span class="vw-eyebrow">WHY VOLUNTEER?</span><h2 id="vw-community-title">STRONGER COMMUNITIES<br/><span>START WITH PEOPLE.</span></h2>
+ <p>Help shape a mission that puts people first, from everyday rider safety to the long road after a crash.</p>
+ <ul><li>Support safer, better-informed riders</li><li>Contribute the experience and skills you already have</li><li>Help build lasting community relationships</li><li>Connect with people who care about other riders</li></ul>
+ <a class="vw-secondary-link" href="/programs/">Learn about the four GEAR pillars ↗</a>
+ </div>
+</div></section>
+<section class="vw-how" aria-labelledby="vw-how-heading"><div class="wrap"><div class="vw-section-heading"><div><span class="vw-eyebrow">THREE SIMPLE STEPS</span><h2 id="vw-how-heading">HOW TO GET <span>INVOLVED.</span></h2></div><p>We're starting with interest and introductions, not formal job assignments.</p></div><div class="vw-steps">
+ <article><span>01</span><h3>Tell us about yourself</h3><p>Select your interests and availability using the short form below.</p></article>
+ <article><span>02</span><h3>We'll connect</h3><p>When relevant opportunities develop, the foundation can follow up with you.</p></article>
+ <article><span>03</span><h3>Make an impact</h3><p>Future activities will follow appropriate training, safety and onboarding procedures.</p></article>
+ </div></div></section>
 <section id="volunteer-interest" class="vol-signup section"><div class="wrap vol-form-grid"><div class="vol-form-intro">
   <span class="vol-kicker">EXPRESS YOUR INTEREST</span><h2>LET'S GET<br/><em>YOU IN GEAR.</em></h2><p>This short form helps us connect your interests and experience with future GEAR opportunities. We are not collecting formal volunteer applications yet.</p>
   <div class="vol-contact-aside"><strong>Prefer email?</strong><p>Send a volunteer inquiry directly to <a href="mailto:volunteer@gearmotofoundation.org?subject=GEAR%20Volunteer%20Interest">volunteer@gearmotofoundation.org</a>.</p><p>Website form delivery is pending live configuration verification. If the form service is unavailable, the email fallback below prepares a message in your mail app.</p></div>
@@ -58,6 +82,7 @@ const opportunities = [
  const form=document.getElementById('gear-volunteer-form');
  const feedback=document.getElementById('vol-feedback');
  const emailFallback=document.getElementById('vol-email-fallback');
+ document.querySelectorAll('[data-vol-interest]').forEach(card=>card.addEventListener('click',()=>{const field=[...document.querySelectorAll('input[name="interest"]')].find(input=>input.value===card.dataset.volInterest);if(field)field.checked=true;}));
  if(!form||!feedback||!emailFallback) return;
  const prepare=()=>{
    if(!form.reportValidity()) return null;
@@ -168,4 +193,69 @@ const opportunities = [
 .vol-disclaimer{font-size:11px;color:#555e65;line-height:1.7}
 @media(max-width:950px){.vol-role-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vol-form-grid{grid-template-columns:1fr}.vol-intro-grid{gap:25px}}
 @media(max-width:650px){.vol-hero{min-height:570px}.vol-hero-overlay{background:linear-gradient(90deg,rgba(10,15,21,.93),rgba(10,15,21,.65))}.vol-intro-grid,.vol-why-grid,.vol-how-grid,.vol-role-grid,.vol-field-row,.vol-option-grid{grid-template-columns:1fr}.vol-role-card{min-height:0}.vol-why figure{padding-bottom:20px}.vol-form-panel{padding:24px 18px}}
+
+/* Volunteer page refresh — clean white image-led layout */
+.vol-white-hero{background:#fff;overflow:hidden}
+.vol-white-hero-grid{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);align-items:center;gap:18px;padding-top:55px;padding-bottom:51px}
+.vol-white-hero-content{position:relative;z-index:1;padding:34px 0 32px}
+.vw-eyebrow{color:#c51c27;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+.vol-white-hero-content h1{font:800 clamp(68px,8.5vw,116px)/.9 'Barlow Condensed',Impact,sans-serif;letter-spacing:.015em;color:#111820;margin:16px 0 20px;word-break:normal}
+.vol-white-hero-content h1 span{display:block;color:#d71920}
+.vol-white-hero-content h2{font-size:clamp(25px,3vw,35px);margin:0;color:#111820}
+.vw-red-rule{height:4px;width:88px;background:#d71920;margin:22px 0}
+.vol-white-hero-content>p{max-width:525px;font-size:16px;line-height:1.8;color:#343a40}
+.vol-white-hero-content p.vw-hero-stage{font-size:13px;border-left:3px solid #d71920;padding-left:14px;font-weight:600;color:#57616b}
+.vol-white-hero-content .actions{align-items:center}
+.vw-secondary-link{font-weight:800;color:#af101a;font-size:13px;text-underline-offset:4px}
+.vw-mini-slogan{display:block;margin-top:35px;font-size:11px;font-weight:800;letter-spacing:.12em;color:#727b84}
+.vw-mini-slogan strong{color:#c51c27}
+.vw-hero-figure{margin:0;align-self:stretch;position:relative;min-height:415px;display:flex;flex-direction:column;justify-content:center}
+.vw-hero-figure::after{content:"";pointer-events:none;position:absolute;inset:0 50% 33px 0;background:linear-gradient(90deg,#fff,transparent)}
+.vw-hero-figure img{display:block;width:100%;height:100%;min-height:415px;max-height:540px;object-fit:cover;object-position:center}
+.vw-hero-figure figcaption{font-size:11px;line-height:1.5;color:#69747c;margin-top:9px}
+.vw-progress-strip{background:#f3f5f6;border-top:1px solid #e5e9eb;border-bottom:1px solid #e5e9eb;padding:20px 0}
+.vw-progress-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px}
+.vw-progress-icon{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;font-weight:900;background:#d71920;color:#fff;font-size:22px}
+.vw-progress-inner h2{font-size:29px;margin:3px 0 3px}
+.vw-progress-inner p{font-size:12px;color:#515b65;margin:0;line-height:1.65}
+.vw-progress-inner>a{font-size:12px;font-weight:800;white-space:nowrap;text-underline-offset:4px}
+.vw-roles{background:#fff;padding:clamp(55px,7vw,94px) 0}
+.vw-section-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:27px}
+.vw-section-heading h2{font-size:clamp(40px,5vw,64px);margin:10px 0 0}
+.vw-section-heading h2 span{color:#c51c27}
+.vw-section-heading>p{max-width:400px;font-size:14px;line-height:1.7;margin:0;color:#525d65}
+.vw-role-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.vw-role-card{display:flex;flex-direction:column;background:#fff;min-width:0;border:1px solid #e4e6e8;text-decoration:none;color:#111820;box-shadow:0 2px 14px rgba(15,24,32,.05);transition:transform .18s ease,box-shadow .18s ease}
+.vw-role-card:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(15,24,32,.12)}
+.vw-role-image{position:relative;aspect-ratio:1.95;overflow:hidden;background:#dde2e6}
+.vw-role-image img{display:block;width:100%;height:100%;object-fit:cover}
+.vw-role-number{position:absolute;bottom:0;left:0;background:#d71920;color:#fff;padding:5px 12px;font-size:11px;font-weight:800}
+.vw-role-details{padding:19px 20px 17px;display:flex;flex-direction:column;flex:1}
+.vw-role-details h3{font-size:29px;margin:0 0 9px;line-height:1.1}
+.vw-role-details p{font-size:13px;line-height:1.65;color:#44505a;margin:0 0 14px;flex:1}
+.vw-role-details>div{display:flex;justify-content:space-between;gap:10px;align-items:center;border-top:1px solid #e7eaed;padding-top:10px}
+.vw-role-details>div span{font-size:10px;font-weight:700;color:#7d4146}
+.vw-role-details b{font-size:22px;color:#d71920}
+.vw-caption{font-size:11px;color:#616b74;margin:16px 0 0}
+.vw-community{background:#f4f5f6;padding:clamp(50px,6vw,82px) 0}
+.vw-community-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(24px,4vw,65px)}
+.vw-community figure{margin:0}
+.vw-community figure img{width:100%;aspect-ratio:1.5;object-fit:cover;display:block}
+.vw-community figcaption{font-size:11px;color:#606d76;margin-top:9px}
+.vw-community h2{font-size:clamp(36px,4vw,56px);margin:10px 0 18px}
+.vw-community h2 span{color:#c51c27}
+.vw-community p{font-size:14px;line-height:1.8;color:#3e4b56}
+.vw-community ul{list-style:none;margin:22px 0;padding:0}
+.vw-community li{position:relative;padding:0 0 12px 29px;font-weight:600;font-size:14px}
+.vw-community li::before{content:"✓";position:absolute;left:0;top:0;color:#d71920;font-weight:900}
+.vw-how{background:#fff;padding:clamp(55px,7vw,92px) 0}
+.vw-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.vw-steps article{padding:23px 23px 28px;background:#f5f6f7;border-top:4px solid #d71920}
+.vw-steps article>span{font:800 38px/1 'Barlow Condensed',Impact,sans-serif;color:#d71920}
+.vw-steps h3{font-size:30px;margin:17px 0 9px}
+.vw-steps p{font-size:13px;line-height:1.75;color:#505c65;margin:0}
+.vol-signup{background:#f0f2f3}
+@media(max-width:980px){.vol-white-hero-grid{grid-template-columns:1fr}.vw-hero-figure{min-height:260px}.vw-hero-figure img{height:330px;min-height:0}.vw-hero-figure::after{display:none}.vw-progress-inner{grid-template-columns:auto 1fr}.vw-progress-inner>a{grid-column:2}.vw-role-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:690px){.vol-white-hero-grid{padding-top:26px;padding-bottom:28px}.vol-white-hero-content{padding:20px 0 10px}.vol-white-hero-content h1{font-size:clamp(62px,16vw,97px)}.vw-hero-figure img{height:230px}.vw-role-grid,.vw-community-grid,.vw-steps{grid-template-columns:1fr}.vw-section-heading{flex-direction:column;align-items:flex-start}.vw-progress-inner{grid-template-columns:1fr}.vw-progress-inner>a{grid-column:1}.vw-progress-icon{display:none}.vw-role-image{aspect-ratio:2.2}.vw-roles{padding-top:45px}.vw-mini-slogan{margin-top:20px}}
+@media(prefers-reduced-motion:reduce){.vw-role-card{transition:none}.vw-role-card:hover{transform:none}}
 </style>
