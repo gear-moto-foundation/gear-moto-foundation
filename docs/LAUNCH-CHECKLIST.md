@@ -19,3 +19,12 @@
 - [ ] Verify event liability/insurance procedures, secure grant intake and medical-data privacy.
 - [ ] Add downloadable official Articles and adopted bylaws only after verification.
 - [ ] Enable donation collection, commerce or grant intake only after all appropriate controls are operating.
+
+## Volunteer readiness and launch progress
+- [x] Create volunteer interest page with clear future-role categories, privacy consent and email fallback.
+- [x] Add honest homepage development milestone tracker (no invented percentage).
+- [x] Add Volunteer to primary navigation.
+- [ ] Verify live volunteer-interest submission through /api/contact to info@gearmotofoundation.org.
+- [ ] Verify consent and email follow-up handling, access controls and appropriate retention/deletion.
+- [ ] Create and upload dedicated JPEG volunteer imagery under 2 MB each; replace illustrative Impact photos when ready.
+- [ ] Keep homepage milestone labels manually updated against verified board/legal/program status.
