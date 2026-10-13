@@ -34,7 +34,7 @@ const opportunities = [
 </div></div></section>
 <section id="volunteer-interest" class="vol-signup section"><div class="wrap vol-form-grid"><div class="vol-form-intro">
   <span class="vol-kicker">EXPRESS YOUR INTEREST</span><h2>LET'S GET<br/><em>YOU IN GEAR.</em></h2><p>This short form helps us connect your interests and experience with future GEAR opportunities. We are not collecting formal volunteer applications yet.</p>
-  <div class="vol-contact-aside"><strong>Prefer email?</strong><p>Send a volunteer inquiry directly to <a href="mailto:info@gearmotofoundation.org?subject=GEAR%20Volunteer%20Interest">info@gearmotofoundation.org</a>.</p><p>Website form delivery is pending live configuration verification. If the form service is unavailable, the email fallback below prepares a message in your mail app.</p></div>
+  <div class="vol-contact-aside"><strong>Prefer email?</strong><p>Send a volunteer inquiry directly to <a href="mailto:volunteer@gearmotofoundation.org?subject=GEAR%20Volunteer%20Interest">volunteer@gearmotofoundation.org</a>.</p><p>Website form delivery is pending live configuration verification. If the form service is unavailable, the email fallback below prepares a message in your mail app.</p></div>
 </div>
 <div class="vol-form-panel">
   <form id="gear-volunteer-form" method="post" action="/api/contact" novalidate>
@@ -73,7 +73,7 @@ const opportunities = [
    const result=prepare();if(!result)return;
    const data=result.data;
    const body=['Hello GEAR Moto Foundation,','I would like to be contacted about future volunteer opportunities.','','Name: '+data.get('name'),'Email: '+data.get('email'),'Phone: '+(data.get('phone')||'Not provided'),result.detail].join('\n');
-   window.location.href='mailto:info@gearmotofoundation.org?subject='+encodeURIComponent('GEAR Volunteer Interest')+'&body='+encodeURIComponent(body);
+   window.location.href='mailto:volunteer@gearmotofoundation.org?subject='+encodeURIComponent('GEAR Volunteer Interest')+'&body='+encodeURIComponent(body);
    feedback.textContent='Your email application should open. Your interest is not submitted until you send the email.';
    feedback.dataset.state='';
  });

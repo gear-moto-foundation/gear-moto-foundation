@@ -20,7 +20,7 @@ Use believable Utah-area motorcycle-community scenes, adults in their early-to-m
 - Prefer real event photography with consent once activities are actually organized.
 
 ## Email and operational readiness
-- Volunteer form submits to the existing Cloudflare Pages Function `/api/contact`, with topic `Volunteering` and a summarized interest message routed to `info@gearmotofoundation.org`.
+- Volunteer form submits to the existing Cloudflare Pages Function `/api/contact`, with topic `Volunteering` and a summarized interest message routed to `volunteer@gearmotofoundation.org`.
 - User-initiated email fallback is offered if the provider is not configured or delivery fails.
 - Form delivery **not independently verified** on production. Test end-to-end before promising signups.
 - Interest forms are not applications, guarantee of volunteer placement, or agreement to serve. Do not request background checks, medical information, accident records, SSNs or financial materials through this site.
