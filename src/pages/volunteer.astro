@@ -1,6 +1,171 @@
 ---
 import Base from '../layouts/Base.astro';
+const opportunities = [
+  {icon:'01',title:'Events & Community',summary:'Help organize future rider meetups, check-in, community tables, route logistics and event-day hospitality.',tags:'Planning • Outreach • Event support'},
+  {icon:'02',title:'Rider Safety & Education',summary:'Support educational outreach and help connect the foundation with qualified instructors and gear partners. No training credentials are assumed.',tags:'Safety • Training partners • Gear access'},
+  {icon:'03',title:'Media & Storytelling',summary:'Photography, video, design, social media, editing and responsible community storytelling.',tags:'Creative • Marketing • Content'},
+  {icon:'04',title:'Outreach & Partnerships',summary:'Introduce GEAR to riders, shops, dealers, community businesses and potential program partners.',tags:'Connections • Sponsors • Relationships'},
+  {icon:'05',title:'Operations & Administration',summary:'Help with coordination, planning, research, communications and organizational logistics as systems are built.',tags:'Organization • Technology • Planning'},
+  {icon:'06',title:'Professional Expertise',summary:'Offer relevant experience in nonprofit governance, accounting, grant design, legal review, safety or healthcare partnerships.',tags:'Governance • Finance • Specialized skills'}
+];
 ---
-<Base title="Get Involved" description="Learn about planned volunteering and community participation with GEAR Moto Foundation.">
-<section class="inner-hero"><div class="wrap"><div class="eyebrow">Riders Helping Riders</div><h1>There's a Place<br/><span class="accent">For You Here.</span></h1></div></section>
-<section class="section"><div class="wrap"><h2>Help Build GEAR</h2><p class="lede">We are developing a rider-led community rooted in practical help and safer riding. You do not need to own a particular motorcycle, belong to a riding club, or ride at all to support the mission.</p><div class="cards gear-balanced-three"><article class="card"><h3>Events</h3><p>Help with check-in, route coordination, venue relations, volunteer support, and mission outreach when events launch.</p></article><article class="card"><h3>Community</h3><p>Introduce us to local riders, dealerships, shops, training providers and potential host businesses.</p></article><article class="card"><h3>Professional Skills</h3><p>Contribute experience in nonprofit operations, marketing, legal compliance, finance, safety, medical support, and technology.</p></article></div><div class="program-callout"><strong>Volunteer status:</strong> Formal positions and onboarding procedures are being developed. Participation is not a condition of program eligibility.</div><div class="actions"><a class="btn btn-red" href="mailto:info@gearmotofoundation.org?subject=GEAR%20Volunteer%20Interest">Express Interest</a></div></div></section></Base>
+<Base title="Volunteer With GEAR" description="Express interest in volunteering with GEAR Moto Foundation as we build motorcycle safety, rider education, community outreach and recovery support programs.">
+<section class="vol-hero">
+  <img class="vol-hero-photo" src="/images/impact/gear-moto-foundation-our-impact-young-sportbike-riders-community.jpg" alt="" fetchpriority="high"/>
+  <div class="vol-hero-overlay"></div>
+  <div class="wrap vol-hero-inner">
+    <span class="vol-kicker">GEAR MOTO FOUNDATION / VOLUNTEER COMMUNITY</span>
+    <h1>SHOW UP.<br/><em>MAKE IT MATTER.</em></h1>
+    <p>We are looking for the people who want to help build a safer, stronger riding community. Riders, non-riders, builders, creatives and people who simply care—there's room for you.</p>
+    <div class="actions"><a class="btn btn-red" href="#volunteer-interest">Share Your Interest ↗</a><a class="btn hero-outline" href="#volunteer-roles">Ways to Help ↓</a></div>
+    <p class="vol-hero-caption">Illustrative rider-community photograph; not a depiction of an active GEAR volunteer program.</p>
+  </div>
+</section>
+<section class="vol-intro section"><div class="wrap vol-intro-grid"><div><span class="vol-kicker">RIDERS HELPING RIDERS</span><h2>YOU DON'T HAVE TO RIDE<br/><span>TO MAKE A DIFFERENCE.</span></h2></div><div><p>Protective equipment. Better education. Helpful connections. Support after a crash. Our four pillars need people with different skills and experiences to become real.</p><p><strong>We're collecting expressions of interest while the foundation develops.</strong> Formal volunteer positions, event assignments, onboarding and training have not launched. An inquiry is not a commitment or guarantee of placement.</p></div></div></section>
+<section id="volunteer-roles" class="vol-roles section"><div class="wrap">
+  <div class="vol-section-head"><span class="vol-kicker">WHERE YOUR SKILLS COULD HELP</span><h2>BRING WHAT<br/><em>YOU'VE GOT.</em></h2><p>These are potential future opportunities, not currently staffed positions. Select the areas that interest you most.</p></div>
+  <div class="vol-role-grid">{opportunities.map(o=><article class="vol-role-card"><div class="vol-role-number">{o.icon} / 06</div><h3>{o.title}</h3><p>{o.summary}</p><span>{o.tags}</span></article>)}</div>
+</div></section>
+<section class="vol-why"><div class="wrap vol-why-grid"><div><span class="vol-kicker">ALL BIKES. ALL RIDERS.</span><h2>THE COMMUNITY<br/><em>IS THE MISSION.</em></h2><p>Some of the most important work happens before someone rides—and when they need support afterward. Volunteer interest helps us understand who is ready to build that kind of community.</p><a href="/programs/" class="btn btn-outline-dark">Explore Our Four Pillars ↗</a></div><figure><img src="/images/impact/gear-moto-foundation-our-impact-rider-assistance-resources.jpg" alt="Illustrative scene showing motorcycle community volunteers helping a rider review resource information" loading="lazy" decoding="async"/><figcaption>Illustrative concept imagery, not an existing volunteer event.</figcaption></figure></div></section>
+<section class="vol-how section"><div class="wrap"><span class="vol-kicker">SIMPLE FIRST STEPS</span><h2>START WITH<br/><span>A CONVERSATION.</span></h2><div class="vol-how-grid">
+  <article><strong>01</strong><h3>Raise Your Hand</h3><p>Tell us what interests you and what experience you would like to share.</p></article>
+  <article><strong>02</strong><h3>We'll Connect</h3><p>As volunteer roles develop, GEAR can follow up to discuss suitable opportunities.</p></article>
+  <article><strong>03</strong><h3>Build Together</h3><p>Future assignments would follow appropriate onboarding, safety and role requirements.</p></article>
+</div></div></section>
+<section id="volunteer-interest" class="vol-signup section"><div class="wrap vol-form-grid"><div class="vol-form-intro">
+  <span class="vol-kicker">EXPRESS YOUR INTEREST</span><h2>LET'S GET<br/><em>YOU IN GEAR.</em></h2><p>This short form helps us connect your interests and experience with future GEAR opportunities. We are not collecting formal volunteer applications yet.</p>
+  <div class="vol-contact-aside"><strong>Prefer email?</strong><p>Send a volunteer inquiry directly to <a href="mailto:info@gearmotofoundation.org?subject=GEAR%20Volunteer%20Interest">info@gearmotofoundation.org</a>.</p><p>Website form delivery is pending live configuration verification. If the form service is unavailable, the email fallback below prepares a message in your mail app.</p></div>
+</div>
+<div class="vol-form-panel">
+  <form id="gear-volunteer-form" method="post" action="/api/contact" novalidate>
+    <div class="vol-field-row"><label class="vol-field" for="vol-name">Your name <span>*</span><input id="vol-name" name="name" maxlength="120" autocomplete="name" required placeholder="First and last name"/></label><label class="vol-field" for="vol-email">Email address <span>*</span><input id="vol-email" name="email" type="email" maxlength="254" autocomplete="email" required placeholder="you@example.com"/></label></div>
+    <div class="vol-field-row"><label class="vol-field" for="vol-phone">Phone <small>(optional)</small><input id="vol-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" placeholder="Optional"/></label><label class="vol-field" for="vol-area">Your city / area <small>(optional)</small><input id="vol-area" name="area" type="text" maxlength="90" placeholder="e.g., Salt Lake City"/></label></div>
+    <fieldset class="vol-options"><legend>Where would you like to help? <span>*</span></legend><p>Choose any that fit.</p>
+      <div class="vol-option-grid"><label><input type="checkbox" name="interest" value="Events & Community"/> Events &amp; Community</label><label><input type="checkbox" name="interest" value="Rider Safety & Education"/> Rider Safety &amp; Education</label><label><input type="checkbox" name="interest" value="Media & Storytelling"/> Media &amp; Storytelling</label><label><input type="checkbox" name="interest" value="Outreach & Partnerships"/> Outreach &amp; Partnerships</label><label><input type="checkbox" name="interest" value="Operations & Administration"/> Operations &amp; Administration</label><label><input type="checkbox" name="interest" value="Professional Expertise"/> Professional Expertise</label></div>
+    </fieldset>
+    <label class="vol-field" for="vol-time">What best describes your availability? <select id="vol-time" name="availability" required><option value="">Select one</option><option>Weekdays</option><option>Evenings</option><option>Weekends</option><option>Flexible / depends on opportunity</option><option>Remote / project-based only</option></select></label>
+    <label class="vol-field" for="vol-message">Anything else you'd like us to know? <small>(optional)</small><textarea id="vol-message" name="notes" rows="4" maxlength="1000" placeholder="Skills, interests or a little about yourself. Please don't include sensitive personal information."></textarea></label>
+    <label class="vol-consent"><input id="vol-consent" type="checkbox" required/> <span>I agree that GEAR may use the contact information I provide to respond about volunteer opportunities. This is an expression of interest, not an application or commitment. See the <a href="/privacy/">privacy notice</a>. <strong>*</strong></span></label>
+    <div class="vol-trap" aria-hidden="true"><label for="vol-website">Leave blank</label><input id="vol-website" name="website" autocomplete="off" tabindex="-1"/></div>
+    <div class="vol-form-buttons"><button class="btn btn-red" type="submit">Send My Interest ↗</button><button class="vol-email-fallback" id="vol-email-fallback" type="button">Use My Email App Instead →</button></div>
+    <p id="vol-feedback" role="status" aria-live="polite" class="vol-feedback"></p>
+    <p class="vol-disclaimer">No volunteer assignments, public grant applications, or donations are open through this form. Please do not submit medical, accident, insurance or financial information.</p>
+  </form>
+</div></div></section>
+<section class="closing-cta"><div class="wrap"><span class="section-label">PEOPLE FIRST. ALWAYS.</span><h2>THE RIDERS ARE<br/><em>THE REASON.</em></h2><p>Better roads and stronger communities start with people who decide to show up for one another.</p><div class="actions"><a class="btn btn-white" href="#volunteer-interest">Get Involved ↗</a><a class="btn hero-outline" href="/governance/">Our Development Status →</a></div></div></section>
+<script is:inline>
+(() => {
+ const form=document.getElementById('gear-volunteer-form');
+ const feedback=document.getElementById('vol-feedback');
+ const emailFallback=document.getElementById('vol-email-fallback');
+ if(!form||!feedback||!emailFallback) return;
+ const prepare=()=>{
+   if(!form.reportValidity()) return null;
+   const interests=[...form.querySelectorAll('input[name="interest"]:checked')].map(x=>x.value);
+   if(!interests.length){feedback.textContent='Please choose at least one volunteer area.';feedback.dataset.state='error';form.querySelector('input[name="interest"]').focus();return null;}
+   const data=new FormData(form);
+   const detail=['Volunteer interest request','Area: '+(data.get('area')||'Not provided'),'Interests: '+interests.join(', '),'Availability: '+data.get('availability'),'Experience / notes: '+(data.get('notes')||'Not provided')].join('\n');
+   data.delete('area'); data.delete('notes'); data.delete('availability'); data.delete('interest');
+   data.set('topic','Volunteering'); data.set('message',detail);
+   return {data,detail};
+ };
+ emailFallback.addEventListener('click',()=>{
+   const result=prepare();if(!result)return;
+   const data=result.data;
+   const body=['Hello GEAR Moto Foundation,','I would like to be contacted about future volunteer opportunities.','','Name: '+data.get('name'),'Email: '+data.get('email'),'Phone: '+(data.get('phone')||'Not provided'),result.detail].join('\n');
+   window.location.href='mailto:info@gearmotofoundation.org?subject='+encodeURIComponent('GEAR Volunteer Interest')+'&body='+encodeURIComponent(body);
+   feedback.textContent='Your email application should open. Your interest is not submitted until you send the email.';
+   feedback.dataset.state='';
+ });
+ form.addEventListener('submit',async event=>{
+   event.preventDefault();const result=prepare();if(!result)return;
+   const button=form.querySelector('button[type="submit"]');
+   button.disabled=true;feedback.dataset.state='';feedback.textContent='Sending your volunteer interest…';
+   try{
+     const response=await fetch(form.action,{method:'POST',body:result.data,headers:{Accept:'application/json'}});
+     const body=await response.json().catch(()=>({}));
+     if(!response.ok||!body.ok)throw new Error(body.error||'The website form could not deliver your message.');
+     feedback.textContent='Your interest was sent to GEAR. Thank you for reaching out. We will follow up as opportunities develop.';
+     feedback.dataset.state='success';form.reset();
+   }catch(error){feedback.textContent=(error instanceof Error?error.message:'Unable to send.')+' Please use “Use My Email App Instead” below to send your information directly.';feedback.dataset.state='error';}
+   finally{button.disabled=false;}
+ });
+})();
+</script>
+</Base>
+<style>
+.vol-hero{background:#111820;color:#fff;position:relative;min-height:520px;display:flex;align-items:center;overflow:hidden}
+.vol-hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.vol-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,15,21,.96) 0%,rgba(10,15,21,.85) 43%,rgba(10,15,21,.2) 100%)}
+.vol-hero-inner{position:relative;z-index:1;width:100%;padding-top:85px;padding-bottom:72px}
+.vol-kicker{font-size:11px;font-weight:800;letter-spacing:.18em;color:#d71920}
+.vol-hero .vol-kicker{color:#ff6770}
+.vol-hero h1{font-size:clamp(58px,7.5vw,112px);color:#fff;line-height:.94;margin:17px 0 25px;max-width:720px}
+.vol-hero h1 em{font-style:normal;color:#f43c46}
+.vol-hero p:not(.vol-hero-caption){max-width:600px;font-size:18px;color:#e6eaee}
+.vol-hero-caption{font-size:11px;color:#e2e5e8;margin-top:32px}
+.vol-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.vol-intro h2{font-size:clamp(40px,5vw,65px);margin:12px 0}
+.vol-intro h2 span{color:#d71920}
+.vol-intro-grid p{font-size:15px;line-height:1.9}
+.vol-roles{background:#111820;color:#fff}
+.vol-section-head h2{font-size:clamp(48px,6vw,78px);color:#fff;margin:14px 0}
+.vol-section-head h2 em{font-style:normal;color:#ff4b53}
+.vol-section-head p{max-width:700px;color:#cfd6dd}
+.vol-role-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:32px}
+.vol-role-card{border:1px solid #45515d;border-top:4px solid #e72a36;background:#19242f;padding:25px;display:flex;flex-direction:column;min-height:244px}
+.vol-role-number{font-size:11px;font-weight:800;color:#ff9aa0;letter-spacing:.1em}
+.vol-role-card h3{font-size:31px;color:#fff;margin:16px 0 9px}
+.vol-role-card p{font-size:13px;line-height:1.7;color:#d4dce3;flex:1;margin:0}
+.vol-role-card>span{font-size:11px;font-weight:700;color:#ffa6ab;margin-top:20px}
+.vol-why{background:#f1f3f4}
+.vol-why-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.vol-why-grid>div{padding:clamp(35px,5vw,75px) 0}
+.vol-why h2{font-size:clamp(45px,6vw,79px);line-height:1;margin:16px 0}
+.vol-why h2 em{font-style:normal;color:#c51a23}
+.vol-why p{line-height:1.8;margin:0 0 25px}
+.vol-why figure{margin:0}
+.vol-why figure img{width:100%;display:block;aspect-ratio:5/4;object-fit:cover}
+.vol-why figcaption{font-size:11px;color:#59616b;padding:9px 0}
+.vol-how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:30px}
+.vol-how h2{font-size:clamp(44px,5vw,65px);margin:14px 0}
+.vol-how h2 span{color:#d71920}
+.vol-how article{border-top:4px solid #d71920;padding-top:20px}
+.vol-how article>strong{color:#d71920;font-family:'Barlow Condensed',Impact,sans-serif;font-size:38px}
+.vol-how h3{font-size:32px;margin:12px 0}
+.vol-how p{font-size:14px;line-height:1.75}
+.vol-signup{background:#e9edef}
+.vol-form-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:40px;align-items:start}
+.vol-form-intro h2{font-size:clamp(54px,6vw,80px);margin:16px 0}
+.vol-form-intro h2 em{font-style:normal;color:#c51a23}
+.vol-form-intro>p{font-size:15px;line-height:1.8}
+.vol-contact-aside{border-left:4px solid #d71920;margin-top:35px;padding:16px 21px;background:#fff}
+.vol-contact-aside p{font-size:13px;line-height:1.7}
+.vol-form-panel{padding:clamp(20px,3vw,38px);background:#fff;border-top:5px solid #d71920;box-shadow:0 6px 23px rgba(0,0,0,.06)}
+.vol-field-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.vol-field{display:flex;flex-direction:column;font-size:12px;line-height:1.55;font-weight:800;gap:7px;margin-bottom:19px}
+.vol-field>span,.vol-options legend span{color:#d71920}
+.vol-field small{font-weight:500;color:#64707b}
+.vol-field input,.vol-field select,.vol-field textarea{display:block;width:100%;padding:13px 12px;border:1px solid #aab3bb;border-radius:3px;background:#fff;color:#111820;font:400 14px/1.5 Inter,system-ui,sans-serif}
+.vol-field input:focus,.vol-field select:focus,.vol-field textarea:focus{outline:3px solid #e7a1a5;outline-offset:1px}
+.vol-options{border:0;padding:0;margin:3px 0 25px}
+.vol-options legend{font-size:13px;font-weight:800}
+.vol-options>p{font-size:12px;color:#64707b;margin:2px 0 12px}
+.vol-option-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vol-option-grid label{border:1px solid #dae0e5;padding:11px;display:flex;gap:8px;align-items:center;font-size:12px;line-height:1.35;cursor:pointer}
+.vol-option-grid input,.vol-consent input{accent-color:#d71920;flex:none;width:16px;height:16px}
+.vol-consent{display:flex;gap:11px;align-items:start;font-size:12px;line-height:1.7;margin:5px 0 23px}
+.vol-consent input{margin:4px 0 0}
+.vol-consent strong{color:#d71920}
+.vol-trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.vol-form-buttons{display:flex;flex-wrap:wrap;gap:13px;align-items:center}
+.vol-form-buttons button{cursor:pointer}
+.vol-form-buttons button:disabled{opacity:.6;cursor:wait}
+.vol-email-fallback{background:transparent;border:0;padding:12px 4px;text-decoration:underline;text-underline-offset:4px;font-weight:700;font-size:12px;color:#a80f15}
+.vol-feedback{font-size:13px;line-height:1.65;margin:15px 0}
+.vol-feedback[data-state="error"]{color:#ad1321}
+.vol-feedback[data-state="success"]{color:#185a32}
+.vol-disclaimer{font-size:11px;color:#555e65;line-height:1.7}
+@media(max-width:950px){.vol-role-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vol-form-grid{grid-template-columns:1fr}.vol-intro-grid{gap:25px}}
+@media(max-width:650px){.vol-hero{min-height:570px}.vol-hero-overlay{background:linear-gradient(90deg,rgba(10,15,21,.93),rgba(10,15,21,.65))}.vol-intro-grid,.vol-why-grid,.vol-how-grid,.vol-role-grid,.vol-field-row,.vol-option-grid{grid-template-columns:1fr}.vol-role-card{min-height:0}.vol-why figure{padding-bottom:20px}.vol-form-panel{padding:24px 18px}}
+</style>

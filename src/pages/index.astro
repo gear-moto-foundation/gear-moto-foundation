@@ -9,9 +9,54 @@ const pillars=[
 ---
 <Base title="Riders Helping Riders" description="GEAR Moto Foundation is building access to motorcycle safety gear, rider education, assistance and crash recovery support. All bikes. All riders.">
 <section class="new-hero"><img class="new-hero-img" src="/images/gear-moto-foundation-riders-supporting-riders-hero.jpg" alt="" fetchpriority="high"/><div class="new-hero-shade"></div><div class="wrap hero-content"><div class="hero-kicker"><span class="red-line"></span> RIDERS HELPING RIDERS</div><h1>THE RIDE<br/>CONNECTS US.<br/><em>THE MISSION<br/>MOVES US.</em></h1><p>More than motorcycles. We're building a community that helps riders get equipped, ride smarter, find support and recover when life changes in an instant.</p><div class="actions"><a class="btn btn-red" href="/programs/">Explore Our Mission <span aria-hidden="true">↗</span></a><a class="btn hero-outline" href="/volunteer/">Be Part of GEAR <span aria-hidden="true">→</span></a></div></div><div class="hero-scroll" aria-hidden="true">SCROLL TO EXPLORE ↓</div></section>
+
+<section class="foundation-status" aria-labelledby="foundation-status-title">
+  <div class="wrap">
+    <div class="foundation-status-top">
+      <div><span class="foundation-status-kicker">FOUNDATION DEVELOPMENT / OCTOBER 2026</span><h2 id="foundation-status-title">WE'RE BUILDING <em>THE FOUNDATION.</em></h2><p>GEAR is in the preparation stage. The mission and website are taking shape, but official formation documents, board adoption and charitable status still need verification before we announce them as complete.</p></div>
+      <div class="foundation-status-now"><span class="foundation-now-label">CURRENT FOCUS</span><strong>Website + Volunteer Interest</strong><span>Getting organized. Connecting with riders. Preparing for launch.</span></div>
+    </div>
+    <ol class="foundation-milestones" aria-label="GEAR foundation development milestones">
+      <li class="done"><span class="foundation-milestone-dot" aria-hidden="true">✓</span><div><strong>Mission Blueprint</strong><span>Working plans drafted</span></div></li>
+      <li class="current" aria-current="step"><span class="foundation-milestone-dot" aria-hidden="true">2</span><div><strong>Website & Community</strong><span>Work in progress</span></div></li>
+      <li class="future"><span class="foundation-milestone-dot" aria-hidden="true">3</span><div><strong>Legal & Governance</strong><span>Official status to verify</span></div></li>
+      <li class="future"><span class="foundation-milestone-dot" aria-hidden="true">4</span><div><strong>Programs & Funding</strong><span>Not yet open</span></div></li>
+      <li class="future"><span class="foundation-milestone-dot" aria-hidden="true">5</span><div><strong>Launch & Reporting</strong><span>Planned</span></div></li>
+    </ol>
+    <div class="foundation-status-bottom"><p>This is a milestone tracker, not a percentage of legal or organizational completion. We update it when milestones can be verified; no public grant applications or online donations are open.</p><div><a href="/governance/">Our formation & governance status ↗</a><a href="/volunteer/">Join the volunteer interest list ↗</a></div></div>
+  </div>
+</section>
 <section class="intro-band"><div class="wrap intro-band-grid"><div><span class="section-label">WHY WE EXIST</span><h2>A stronger riding community starts with all of us.</h2></div><div><p>When riders look out for one another, the impact goes far beyond the road. GEAR connects the passion of the motorcycle community with a clear, practical purpose.</p><a class="text-arrow" href="/about/">Discover our story <span aria-hidden="true">↗</span></a></div></div></section>
 <section class="pillar-section" id="the-pillars"><div class="wrap"><div class="section-heading"><div><span class="section-label">THE FOUR PILLARS</span><h2>FOUR LETTERS.<br/><span>ONE MISSION.</span></h2></div><p>From the first helmet to the road back after a crash, every part of GEAR serves a purpose.</p></div><div class="modern-pillar-grid">{pillars.map((p,i)=><a class="modern-pillar" href={p.url}><div class="pillar-top"><span class="pillar-number">0{i+1} / 04</span><span class="pillar-link" aria-hidden="true">↗</span></div><img src={p.image} alt="" loading="lazy"/><div class="pillar-bottom"><h3>{p.name}</h3><p>{p.description}</p><span>Explore {p.name} →</span></div></a>)}</div></div></section>
 <section class="image-story"><div class="image-story-photo"><img src="/images/gear-moto-foundation-motorcycle-rider-community-utah.jpg" alt="Illustrative community of riders gathered with their motorcycles at a scenic overlook" loading="lazy"/><span class="image-disclaimer">Illustrative rider-community image</span></div><div class="image-story-copy"><span class="section-label">ALL BIKES. ALL RIDERS.</span><h2>YOU DON'T HAVE TO RIDE ALONE.</h2><p>Sport bikes, cruisers, touring bikes, commuters, new riders and lifelong enthusiasts: our vision includes everyone. Not a riding club. Not a brand. A mission that puts people first.</p><a class="btn btn-red" href="/events/">Meet the Community <span aria-hidden="true">↗</span></a></div></section>
 <section class="action-section"><div class="wrap"><div class="section-heading"><div><span class="section-label">MAKE YOUR MARK</span><h2>THERE'S MORE THAN<br/>ONE WAY TO HELP.</h2></div><p>Whether you ride, teach, run a business or simply believe in safer roads, there's a way to help shape GEAR.</p></div><div class="action-grid"><a href="/volunteer/" class="action-card"><span>01 — GET INVOLVED</span><h3>Give Your Time.</h3><p>Help bring rider-centered ideas and community events to life.</p><b aria-hidden="true">↗</b></a><a href="/partners/" class="action-card"><span>02 — PARTNER WITH US</span><h3>Build Something Bigger.</h3><p>Connect your business or expertise to a meaningful mission.</p><b aria-hidden="true">↗</b></a><a href="/get-help/" class="action-card"><span>03 — RIDER RESOURCES</span><h3>Find Your Next Step.</h3><p>Explore our developing support programs and availability.</p><b aria-hidden="true">↗</b></a></div></div></section>
 <section class="closing-cta"><div class="wrap"><span class="section-label">BUILT BY RIDERS, FOR RIDERS</span><h2>LET'S MOVE<br/><em>FORWARD. TOGETHER.</em></h2><p>GEAR is in development. Be among the people helping shape what comes next.</p><div class="actions"><a class="btn btn-white" href="/contact/">Start a Conversation ↗</a><a class="btn hero-outline" href="/impact/">Our Commitment to Transparency →</a></div></div></section>
 </Base>
+<style>
+.foundation-status{padding:clamp(38px,5vw,72px) 0;background:#111820;color:#f7f8fa;border-top:5px solid #d71920}
+.foundation-status-top{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(240px,1fr);gap:35px;align-items:end}
+.foundation-status-kicker{font-size:11px;letter-spacing:.17em;font-weight:800;color:#ff848a}
+.foundation-status h2{font-size:clamp(34px,4.6vw,57px);line-height:1.08;margin:14px 0;color:#fff}
+.foundation-status h2 em{font-style:normal;color:#ff454d}
+.foundation-status-top p{max-width:750px;color:#d1d8de;font-size:14px;line-height:1.8;margin:0}
+.foundation-status-now{display:flex;flex-direction:column;gap:5px;padding:21px;border:1px solid #58616b;border-left:4px solid #e82432}
+.foundation-now-label{color:#ff848a;font-weight:800;letter-spacing:.1em;font-size:10px}
+.foundation-status-now strong{font:800 26px/1.12 'Barlow Condensed',Impact,sans-serif;color:#fff;text-transform:uppercase}
+.foundation-status-now span:last-child{font-size:12px;line-height:1.6;color:#d1d8de}
+.foundation-milestones{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));list-style:none;counter-reset:none;margin:38px 0 20px;padding:0;position:relative;gap:8px}
+.foundation-milestones::before{content:"";height:3px;position:absolute;top:20px;left:10%;right:10%;background:#47525d}
+.foundation-milestones li{z-index:1;position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:13px}
+.foundation-milestone-dot{display:flex;justify-content:center;align-items:center;border-radius:50%;width:43px;height:43px;background:#17202b;color:#aeb9c3;border:2px solid #818e99;font-size:16px;font-weight:800}
+.foundation-milestones .done .foundation-milestone-dot{background:#cb1923;color:#fff;border-color:#e82432}
+.foundation-milestones .current .foundation-milestone-dot{background:#fff;color:#111820;border:4px solid #ec2533;box-shadow:0 0 0 5px #202f3a}
+.foundation-milestones li div{display:flex;flex-direction:column;gap:4px;max-width:190px}
+.foundation-milestones strong{font-size:12px;line-height:1.35;color:#fff}
+.foundation-milestones li span:last-child:not(.foundation-milestone-dot){font-size:11px;line-height:1.55;color:#c8d0d7}
+.foundation-milestones .current div span{color:#ff9aa0}
+.foundation-status-bottom{border-top:1px solid #36424e;padding-top:18px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.foundation-status-bottom p{font-size:12px;max-width:570px;color:#c9d2d9;line-height:1.65;margin:0}
+.foundation-status-bottom div{display:flex;flex-wrap:wrap;gap:14px}
+.foundation-status-bottom a{color:#fff;text-decoration:underline;text-underline-offset:4px;font-size:12px;font-weight:700}
+@media(max-width:800px){.foundation-status-top{grid-template-columns:1fr}.foundation-status-bottom{flex-direction:column;align-items:flex-start}}
+@media(max-width:660px){.foundation-milestones{display:flex;flex-direction:column;gap:18px;margin-top:26px}.foundation-milestones::before{top:18px;bottom:18px;left:20px;right:auto;width:3px;height:auto}.foundation-milestones li{flex-direction:row;text-align:left;align-items:center;gap:19px}.foundation-milestones li div{max-width:unset}.foundation-milestone-dot{flex:none}}
+</style>
