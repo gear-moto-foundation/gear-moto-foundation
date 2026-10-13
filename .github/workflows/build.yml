@@ -18,6 +18,8 @@ jobs:
         run: npm install --no-audit --no-fund
       - name: Compile static pages
         run: npm run build
+      - name: Validate all public routes, linked assets, and sitemap
+        run: npm run validate:site
       - name: Validate output
         run: |
           test -f dist/index.html
@@ -34,6 +36,9 @@ jobs:
           test -f dist/images/Gear_G.png
           test -f dist/images/Gear_E.png
           test -f dist/images/Gear_R.png
+          test -f dist/governance/index.html
+          test -f dist/privacy/index.html
+          test -f dist/accessibility/index.html
       - name: Upload deployable static website
         uses: actions/upload-artifact@v4
         with:

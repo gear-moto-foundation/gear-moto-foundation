@@ -1,13 +1,22 @@
-# Release status
+# GEAR Moto Foundation — website release status (October 13, 2026)
 
-The Astro source, six pages and SVG brand marks are committed to the repository.
+## Code and build
+Astro source now defines fourteen public site pages and is built into dist/. GitHub Actions builds on pushes to main and PRs, validates every public route, locally linked assets and sitemap, and publishes a downloadable dist artifact. Consult current Actions status for whether any new build has passed.
 
-## Automatic build
-GitHub Actions runs `.github/workflows/build.yml` on every push to `main`, validates six static pages and uploads the `dist/` folder as a downloadable workflow artifact.
+## Deployment status
+Cloudflare DNS was shown configured to use Cloudflare Pages, but DNS configuration and GitHub source commits alone do not prove the latest build is publicly deployed. Verify the actual Cloudflare Pages deployment and custom domain at production after merges.
 
-## Manual action still required
-The uploaded GEAR originals have been verified in `public/images/`. The Astro hero references `GEAR_Cover.png`, and the header, footer and homepage program graphics use PNGs from that same directory. Verify build success in GitHub Actions before deployment.
+## Incomplete live integrations
+- Contact form uses Cloudflare Pages Functions POST /api/contact and a Resend email-delivery API. Verify sender-domain setup, RESEND_API_KEY, CONTACT_FROM_EMAIL, deployed Pages Function and real routing for each department.
+- Advertised mailboxes must be tested independently: reported MX points to Stackmail while outgoing cPanel server is vps.beehivelaw.com.
+- Confirm Google community calendar is publicly readable and events are real.
+- Donations, checkout and sensitive medical/grant applications remain inactive; no page copy may claim otherwise.
 
-Deploy the built `dist/` files to the selected static hosting service once hosting access is configured. No live-domain deployment has been performed by the GitHub code change.
+## Governance and documents
+The aligned master blueprint, integrated bylaws and Rider Relief policy were reviewed as planning drafts. Filed Articles were not located in the accessible source files. Governance page intentionally describes structure as proposed and offers no links to unverified legal documents. Publish only independently verified Articles, board-adopted bylaws, actual IRS determination and public reporting when available.
 
-Avoid turning on financial transactions or collecting assistance applications until policies, privacy and legal prerequisites are verified.
+## Images
+Two deleted filenames still used by Donate were replaced with already-existing approved Impact images. All five approved Our Impact images remain in their existing folder. No reupload was required for those fixes.
+
+## Verification remaining
+Check actual live pages on mobile and desktop, validate contact submissions, review privacy and accessibility with the team/counsel, verify all inbox aliases, and establish nonprofit filing / registration status before solicitation.

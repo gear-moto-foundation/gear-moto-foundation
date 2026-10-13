@@ -1,15 +1,11 @@
-# Website decision log
+# Website decisions and source of truth — October 13, 2026
 
-## Current implementation
-- **Framework:** Astro static site, pre-rendered output to `dist/`.
-- **Hosting:** Any host serving static HTML/CSS/assets; existing domain can be pointed to the chosen static host after testing.
-- **Brand:** Approved GEAR marks, charcoal/red/white, Barlow Condensed and Inter.
-- **Homepage:** "GEAR UP. TRAIN SMART. RECOVER STRONG." with optional sunset motorcycle hero background.
-- **Pages:** Home, About, Programs, Get Help, Contact, Support the Mission.
-- **Status:** Foundation assistance and fundraising programs remain in development.
-
-## Outstanding work
-- Add original optimized rider JPEG to `public/images/gear-rider-sunset.jpg` (currently missing from GitHub).
-- Confirm legal/charitable status, contact details, fundraising disclosures and program rules.
-- Choose target hosting and configure automated deployment.
-- Run production build, accessibility checks, and mobile-browser verification.
+- Site: Astro static website deployed to Cloudflare Pages when verified; source hosted on GitHub.
+- Brand: approved charcoal, white and ignition red GEAR marks; sportbike-forward but All Bikes. All Riders.
+- Four pillars: Gear = protective equipment, Education = safety/training/endorsements, Assistance = practical guidance/referrals, Recovery = crash-related medical and financial relief, rehabilitation and rebuilding.
+- Planned nonprofit: founder-led, board-governed and professionally operated; bylaws and tax status must not be presented as adopted/verified until independently confirmed.
+- Primary Get Help inquiry: recovery@gearmotofoundation.org. The separate Assistance pillar retains assistance@gearmotofoundation.org for resource navigation.
+- Website has 14 pages, including Governance, Privacy and Accessibility; no actual governing-document PDFs published without verification.
+- Programs, gifts, grants, events, and shop products remain development-stage until approved and launched.
+- Contact form implementation exists but requires verified Cloudflare Pages + Resend environment and live tests.
+- New website photos must use approved SEO names and JPG format under 2 MB. Do not remove or rename assets referenced by the site without updating links.

@@ -27,7 +27,10 @@ The Rider Relief Medical Assistance Program is part of **Recovery**, not the Ass
 | Impact | Blueprint KPIs and beneficiary controls; Bylaws confidentiality and transparency |
 | Get Involved | Blueprint People and Volunteer Structure |
 | Support the Mission | Aligned Donor/Sponsorship Program; no active transaction path |
-| Contact | Confirmed public email: info@gearmotofoundation.org |
+| Contact | Department addresses and Cloudflare form route; real mailbox and form delivery require testing |
+| Governance | Aligned master blueprint and draft bylaws; proposed governance only until Articles and adoption are verified |
+| Privacy | General-contact form source, planned data flows and warning not to submit sensitive applicant information; operational policy pending |
+| Accessibility | General usability goals and feedback pathway; no unverified certification claim |
 
 ## Publishing and compliance gates
 
