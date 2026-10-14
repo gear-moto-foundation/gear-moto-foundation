@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 const root = resolve('dist');
-const routes = ['/', '/about/', '/programs/', '/get-help/', '/contact/', '/donate/', '/events/', '/partners/', '/impact/', '/shop/', '/volunteer/', '/governance/', '/privacy/', '/accessibility/'];
+const routes = ['/', '/about/', '/leadership/', '/programs/', '/get-help/', '/contact/', '/donate/', '/events/', '/partners/', '/impact/', '/shop/', '/volunteer/', '/governance/', '/privacy/', '/accessibility/'];
 const pages = new Map(), errors = [];
 for (const route of routes) {
   const file = join(root, route === '/' ? 'index.html' : route.slice(1) + 'index.html');
