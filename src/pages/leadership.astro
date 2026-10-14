@@ -21,11 +21,10 @@ import Base from '../layouts/Base.astro';
     <div class="wrap">
       <div class="lead-intro"><span class="lead-eyebrow">Founding Leadership</span><p>Building a foundation with a clear mission and the professional experience to help bring it to life.</p></div>
       <div class="lead-profile">
-        <!-- Intentionally no photo at launch. Replace this block with a properly cropped and approved original portrait later. -->
-        <div class="lead-photo" role="img" aria-label="Portrait photo placeholder for Phillip Wade Gale; photograph to be added later">
-          <div class="lead-photo-mark" aria-hidden="true"><span class="lead-photo-head"></span><span class="lead-photo-shoulders"></span></div>
-          <div class="lead-photo-label"><span>PROFILE PHOTO</span><strong>COMING SOON</strong></div>
-        </div>
+        <figure class="lead-photo lead-photo-ready">
+          <img src="/images/gear-wade-founder-cropped.avif" alt="Phillip Wade Gale in motorcycle riding gear beside his red Ducati Monster" width="240" height="300" decoding="async" fetchpriority="high"/>
+          <figcaption>Phillip “Wade” Gale · Founder</figcaption>
+        </figure>
         <div class="lead-copy">
           <span class="lead-eyebrow">Founder &amp; Executive Leadership</span>
           <h2 id="founder-title">PHILLIP <span>“WADE”</span> GALE</h2>
@@ -136,4 +135,8 @@ import Base from '../layouts/Base.astro';
 @media(max-width:1020px){.lead-social-links{grid-template-columns:1fr}}
 @media(max-width:760px){.lead-hero-layout{flex-direction:column;align-items:flex-start;min-height:0}.lead-hero-aside{width:auto;font-size:17px}.lead-intro{display:block}.lead-intro p{margin-top:10px}.lead-profile{grid-template-columns:1fr}.lead-photo{max-width:470px;min-height:340px}.lead-social-links{grid-template-columns:repeat(2,minmax(0,1fr))}.lead-future-grid{grid-template-columns:1fr}.lead-closing-inner{flex-direction:column;align-items:flex-start}}
 @media(max-width:460px){.lead-social-links{grid-template-columns:1fr}.lead-hero h1{font-size:59px}.lead-photo{min-height:300px}}
+.lead-photo-ready{margin:0;display:block;min-height:0;border:0;position:relative;border-radius:5px;overflow:hidden;background:#111820}
+.lead-photo-ready:before,.lead-photo-ready:after{content:none}
+.lead-photo-ready img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top}
+.lead-photo-ready figcaption{position:absolute;bottom:0;left:0;right:0;padding:30px 15px 13px;background:linear-gradient(transparent,rgba(11,17,24,.82));font-size:11px;font-weight:700;color:#fff;letter-spacing:.03em}
 </style>
