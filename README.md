@@ -1,31 +1,36 @@
-# GEAR Moto Foundation — Astro Static Website
+# GEAR Moto Foundation — Astro Website
 
-**Protect the Ride. Support the Rider.**
+**Protect the Ride. Support the Rider.**  
+Public website: https://gearmotofoundation.org
 
-This repository is the **standalone Astro static website** for [gearmotofoundation.org](https://gearmotofoundation.org). The design uses the approved GEAR identity: red/charcoal/white palette, condensed headlines, GEAR logo marks, and an optional sunset motorcycle photo.
+## Status — 2026-10-13
+This is a **prelaunch website**. The mission and website are in development. Utah incorporation, adopted bylaws, IRS recognition, online donations, public assistance applications, and funded programs must **not** be described as completed unless independently verified. GitHub source is not proof that the live deployment matches it.
 
-## Run locally
+## Core charitable program definitions
+- **Gear:** Need-based access to protective helmets and other motorcycle safety equipment.
+- **Education:** Rider safety education, courses, skills and endorsement-related support.
+- **Assistance:** Practical guidance, referrals, resource navigation and connections to service providers. **Not** the medical grant program.
+- **Recovery:** Potential need-based accident-related medical grants, financial hardship support, rehabilitation and rebuilding, subject to adopted policies, appropriated funds and confidential review.
 
-Requires Node.js 20.3+ (recommended 22+).
+No donor or sponsor may choose an individual beneficiary. A supporter, volunteer, or riding-club affiliation does not confer grant preference.
 
+## Routes and content
+Astro pages in `src/pages/` include Home, About, Programs, Get Help, Events, Partners, Donate, Volunteer, Governance, Impact, Contact and Privacy. Shared layout: `src/layouts/Base.astro`. Styles: `src/styles/global.css`. Assets: `public/images/` and `public/brand/`.
+
+## Local development
+Node.js 20.3+ (22 LTS preferred):
 ```bash
 npm install
 npm run dev
 npm run build
+npm run validate:site
 ```
+Static site output is `dist/`.
 
-The production-ready static output is generated in `dist/`. It can be deployed to standard static hosting by uploading the **contents** of `dist/` to the hosting document root. Set the hosting site URL to the domain and configure HTTPS.
+## Volunteer interest and website forms
+The volunteer page solicits **expressions of interest**, not approved volunteer service. Contact: **volunteer@gearmotofoundation.org**.
 
-## Pages
+The front-end form posts to `/api/contact`. This repository also contains a **Cloudflare Pages-specific** function at `functions/api/contact.js`. That backend requires a Cloudflare Pages deployment plus a verified Resend sending domain, `RESEND_API_KEY`, and `CONTACT_FROM_EMAIL`; the production delivery chain must be tested. A generic static upload of `dist/` to WestHost or other static hosting **does not execute** the Cloudflare function. Do not describe form submissions as operational until verified; the volunteer page provides an email-app fallback.
 
-`src/pages/index.astro`, `about.astro`, `programs.astro`, `get-help.astro`, `contact.astro`, and `donate.astro`. Shared layout at `src/layouts/Base.astro`; responsive styling at `src/styles/global.css`.
-
-## Assets
-
-Site-ready SVG marks are in `public/brand/`. The approved photos and logos are stored in `public/images/` (including `GEAR_Cover.png`, `GEAR_Moto_Foundation_BannerLogo.png`, and `Gear_Logo_White.png`). Current layouts directly reference these files. Keep originals in place. Original PNG logos remain in the separately supplied asset package.
-
-## Deployment
-
-See [docs/STATIC-DEPLOYMENT.md](docs/STATIC-DEPLOYMENT.md). No server-side runtime, database, or CMS is required.
-
-**Status:** Draft. Do not claim open grants, active donation processing, or established tax-exempt status without verification. Never commit account credentials or beneficiary records.
+## Deployment and reconciliation
+See `docs/STATIC-DEPLOYMENT.md` and `docs/PUBLIC-CONTENT-RECONCILIATION.md`. Reconcile public claims with the board's current approved source of truth before each publication. Do not commit donor lists, applicant records, secrets, medical information, or private board deliberations.
