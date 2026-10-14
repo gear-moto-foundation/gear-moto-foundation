@@ -16,7 +16,7 @@ This is a PUBLIC website-content control note, not GEAR's private board packet a
 - Board candidates may support fundraising via personal giving, donor/sponsor introductions with active follow-through, or both; no mandatory founding-year donation minimum.
 - Proposed medical grant ceilings are not open offers. Actual annual awards require adopted pool funding and disinterested approval.
 
-## Outstanding launch verification
+## Board and leadership page\n- The `/leadership/` route introduces Phillip “Wade” Gale as Founder, CEO & Executive Director, with a visible qualification that formal corporate appointments await formation and governance approvals.\n- A blank photo placeholder is intentional. No original or generated portrait is in use.\n- The page links the founder’s public Instagram profiles @ducati.afterdark and @wadegaleart and his professional portfolio.\n- Independent board and staff profiles are not published before appointment/confirmation.\n\n## Outstanding launch verification
 1. Determine actual hosting provider and confirm the deployed version.
 2. Confirm whether Cloudflare Pages Functions are active, with verified Resend sender and correct environment secrets, or provide a different working backend. Static hosting alone cannot run `functions/api/contact.js`.
 3. Prove delivery to volunteer@gearmotofoundation.org with a real test submission. Until proven, direct email is the supported fallback.
