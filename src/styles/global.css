@@ -520,3 +520,10 @@ figure.editorial-photo figcaption{max-width:100%;text-align:left}
 .gear-program-detail-letter{display:flex;align-items:center;justify-content:center;font:800 34px/1 'Barlow Condensed',Impact,sans-serif;color:#d71920;border:2px solid #d71920;width:46px;height:46px;border-radius:50%}
 @media(max-width:800px){.gear-program-index-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:450px){.gear-program-index-grid{grid-template-columns:1fr}.gear-program-index-top img{max-width:320px;margin:auto}}
+
+/* CLS stability: reserve a consistent media area while images decode. */
+.gear-program-detail-photo img,.impact-image img,.impact-story-image img{aspect-ratio:16/9;object-fit:contain;background:#e8ecef}
+.gear-program-detail-photo,.impact-image,.impact-story-image{min-width:0}
+.brand-link img{height:60px;object-fit:contain;object-position:left center}
+.footer-brand img{height:75px;object-fit:contain;object-position:left center;display:block}
+@media(max-width:680px){.brand-link img{height:52px}}
