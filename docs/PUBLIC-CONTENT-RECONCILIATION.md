@@ -16,8 +16,18 @@ This is a PUBLIC website-content control note, not GEAR's private board packet a
 - Board candidates may support fundraising via personal giving, donor/sponsor introductions with active follow-through, or both; no mandatory founding-year donation minimum.
 - Proposed medical grant ceilings are not open offers. Actual annual awards require adopted pool funding and disinterested approval.
 
-## Board and leadership page\n- The `/leadership/` route introduces Phillip “Wade” Gale as Founder, CEO & Executive Director, with a visible qualification that formal corporate appointments await formation and governance approvals.\n- A blank photo placeholder is intentional. No original or generated portrait is in use.\n- The page links the founder’s public Instagram profiles @ducati.afterdark and @wadegaleart and his professional portfolio.\n- Independent board and staff profiles are not published before appointment/confirmation.\n\n## Outstanding launch verification
-1. Determine actual hosting provider and confirm the deployed version.
+## Founder, Board and leadership alignment — 2026-10-14
+- Public title: Phillip “Wade” Gale, **Founder, President & Executive Director**. Do not use the title CEO.
+- Founder may serve as **Interim Board Chair** during formation, with annual independent succession review; the independent Chair is not yet confirmed.
+- The contemplated initial board has five voting directors: Founder and four independent directors. The independent Chair is elected from among the independent directors, unless an additional director seat is lawfully created.
+- Founder retains **one ordinary director vote while lawfully serving as Founder Director**, including after relinquishing the interim Chair role. No additional or second casting/tie-breaking vote.
+- Independent directors serve renewable three-year terms without a maximum number of renewals. Founder Director term, designation, protected tenure, reserved rights and renewal remain **subject to Articles/bylaws reconciliation and counsel review**.
+- Disinterested directors conduct all required compensation, related-party and conflicted transactions review.
+- The leadership page uses the founder's actual rider photo and links to @ducati.afterdark, @wadegaleart and wadegale.com.
+- Do not publish proposed director appointments, legal approvals or formal adoption as completed before verification.
+
+## Outstanding launch verification
+1. Cloudflare Pages is confirmed as the intended and previously user-tested production host; verify deployed commit and custom-domain health after changes.
 2. Confirm whether Cloudflare Pages Functions are active, with verified Resend sender and correct environment secrets, or provide a different working backend. Static hosting alone cannot run `functions/api/contact.js`.
 3. Prove delivery to volunteer@gearmotofoundation.org with a real test submission. Until proven, direct email is the supported fallback.
 4. Verify legal entity, board adoption and IRS status against official documents before changing public status labels.
