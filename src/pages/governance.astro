@@ -8,12 +8,19 @@ import Base from '../layouts/Base.astro';
 <h2>Founder-Led. Board-Governed. Professionally Operated.</h2>
 <p>GEAR is being developed as a Utah nonprofit public charity with no voting membership. The planned independent Board of Directors would provide fiduciary oversight, approve core policies and budgets, and review conflicts. The Founder, President &amp; Executive Director would lead day-to-day operations subject to the Articles, bylaws, approved policies, and applicable law. The proposed five-director Board includes the Founder and four independent directors. The Founder may serve as Interim Board Chair during startup; a qualified independent Chair would later be elected from among the independent directors. Every lawfully seated director has one ordinary vote, subject to applicable conflict-of-interest and voting rules.</p>
 <p>The foundation's mission spans <strong>Gear, Education, Assistance, and Recovery</strong>. Charitable assistance is designed for eligible members of an open-ended rider community, not selected friends, clubs, sponsors, directors, or donors.</p>
-<h2>Governing Documents</h2>
+<section class="gov-library" aria-labelledby="gov-library-heading">
+<div class="gov-library-heading"><div><span class="gov-overline">DOCUMENT LIBRARY / ORGANIZATIONAL TRANSPARENCY</span><h2 id="gov-library-heading">Our Governing Documents</h2></div><p>Our commitment to accountability includes making the documents that govern GEAR accessible to the community. As formation progresses, verified and formally adopted documents will be available here to read and download.</p></div>
+<div class="gov-document-notice"><strong>Current status — organizational development.</strong> These document categories reflect our planned governance and reporting commitments. Draft documents are under review and are not official corporate records. We will publish approved copies only after the relevant filing, adoption or authorization has been verified.</div>
 <div class="gov-documents">
-<article><span>01 / FORMATION</span><h3>Articles of Incorporation</h3><p>We intend to provide the actual filed Articles as a downloadable PDF once the official filing and its contents are verified.</p><strong>Official document not yet published</strong></article>
-<article><span>02 / GOVERNANCE</span><h3>Bylaws</h3><p>The integrated bylaws remain under review and must be reconciled with the filed Articles and formally adopted before publication as official bylaws.</p><strong>Adopted document not yet published</strong></article>
-<article><span>03 / TAX &amp; REPORTING</span><h3>IRS and Public Reports</h3><p>When applicable and verified, we intend to publish an IRS determination letter, relevant public returns, and financial accountability information.</p><strong>Verified filings not yet published</strong></article>
+<article><div class="gov-doc-icon" aria-hidden="true">01</div><span>LEGAL FORMATION</span><h3>Articles of Incorporation</h3><p>GEAR's formal Utah corporate formation document, including its charitable purpose and governing provisions. The filed version will be published after acceptance and verification.</p><div class="gov-doc-bottom"><strong>Pending filing verification</strong><small>Official PDF forthcoming</small></div></article>
+<article><div class="gov-doc-icon" aria-hidden="true">02</div><span>BOARD GOVERNANCE</span><h3>Corporate Bylaws</h3><p>How GEAR's Board is organized and how directors, officers, meetings, voting, leadership succession and fiduciary oversight are governed.</p><div class="gov-doc-bottom"><strong>Counsel-review draft</strong><small>Adopted PDF forthcoming</small></div></article>
+<article><div class="gov-doc-icon" aria-hidden="true">03</div><span>ETHICS &amp; OVERSIGHT</span><h3>Conflict of Interest Policy</h3><p>Safeguards for identifying conflicts, recording disclosures and ensuring disinterested review of compensation and related-party transactions.</p><div class="gov-doc-bottom"><strong>Draft policy</strong><small>Approved PDF forthcoming</small></div></article>
+<article><div class="gov-doc-icon" aria-hidden="true">04</div><span>RIDER SUPPORT</span><h3>Rider Relief Policy</h3><p>Proposed eligibility, confidential review, approval controls and responsible limits for accident-related medical assistance. Applications and awards are not open.</p><div class="gov-doc-bottom"><strong>Draft policy</strong><small>Adopted PDF forthcoming</small></div></article>
+<article><div class="gov-doc-icon" aria-hidden="true">05</div><span>LEADERSHIP</span><h3>Board &amp; Leadership</h3><p>Meet GEAR's founder and learn about the planned independent Board, leadership responsibilities and current governance stage.</p><div class="gov-doc-bottom"><strong>Public information available</strong><a href="/leadership/">View leadership <span aria-hidden="true">↗</span></a></div></article>
+<article><div class="gov-doc-icon" aria-hidden="true">06</div><span>TAX &amp; TRANSPARENCY</span><h3>IRS &amp; Financial Reports</h3><p>When issued and verified, we intend to share applicable IRS determination information, required public returns and accountable financial reporting.</p><div class="gov-doc-bottom"><strong>Not yet available</strong><small>Verified reports forthcoming</small></div></article>
 </div>
+<p class="gov-library-footnote">Availability and publication dates depend on formal legal actions and verification. Working board packets, confidential director disclosures, sensitive applicant data and internal planning records are not part of the public document library.</p>
+</section>
 <h2>Accountability Commitments</h2><ul>
 <li><strong>Independent oversight:</strong> Disinterested directors would evaluate founder compensation, related-party transactions, and other potential conflicts through documented procedures.</li>
 <li><strong>Fair awards:</strong> Grant decisions would depend on approved eligibility, need, funding limits and conflict recusals—not membership, friendship, or donated amounts.</li>
@@ -26,11 +33,22 @@ import Base from '../layouts/Base.astro';
 </div></section>
 </Base>
 <style>
-.gov-documents{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:30px 0 40px}
-.gov-documents article{padding:24px;background:#f4f5f6;border-top:5px solid #d71920;min-width:0}
+.gov-library{margin:42px 0 54px}
+.gov-library-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,0.9fr);align-items:end;gap:24px;margin-bottom:20px}
+.gov-library-heading h2{margin:8px 0 0}.gov-library-heading p{margin:0;font-size:14px;line-height:1.75;color:#48535f}
+.gov-overline{font-size:11px;font-weight:800;letter-spacing:.13em;color:#a80f15}
+.gov-document-notice{padding:18px 22px;border-left:4px solid #d71920;background:#f4f5f6;font-size:13px;line-height:1.7;color:#34404b;margin-bottom:22px}
+.gov-documents{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0}
+.gov-documents article{padding:24px;background:#f4f5f6;border-top:5px solid #d71920;min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+.gov-doc-icon{font:800 28px/1 'Barlow Condensed',Impact,sans-serif;color:#d71920;margin-bottom:21px}
 .gov-documents span{font-size:11px;font-weight:800;letter-spacing:.08em;color:#a80f15}
-.gov-documents h3{font-size:32px;margin:16px 0 12px}
-.gov-documents p{font-size:14px;line-height:1.7}
-.gov-documents strong{font-size:12px;color:#6d2930;display:block;margin-top:18px}
-@media(max-width:850px){.gov-documents{grid-template-columns:1fr}}
+.gov-documents h3{font-size:28px;line-height:1.05;margin:12px 0}
+.gov-documents p{font-size:13px;line-height:1.7;margin:0 0 20px;color:#34404b}
+.gov-doc-bottom{border-top:1px solid #d0d5d9;padding-top:14px;width:100%;margin-top:auto;display:flex;flex-direction:column;gap:7px}
+.gov-documents strong{font-size:12px;color:#6d2930}
+.gov-documents small{font-size:12px;color:#66717a}
+.gov-documents a{font-size:12px;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.gov-library-footnote{font-size:12px;line-height:1.7;color:#58636d;margin:19px 0 0}
+@media(max-width:950px){.gov-documents{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.gov-documents{grid-template-columns:1fr}.gov-library-heading{grid-template-columns:1fr}}
 </style>
