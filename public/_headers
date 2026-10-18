@@ -1,3 +1,12 @@
+# Public pages remain accessible to visitors and search crawlers.
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  X-Permitted-Cross-Domain-Policies: none
+
+# Prevent indexing of any API response; do not cache contact results.
+/api/*
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow, noarchive
