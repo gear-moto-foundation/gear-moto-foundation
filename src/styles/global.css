@@ -527,3 +527,9 @@ figure.editorial-photo figcaption{max-width:100%;text-align:left}
 .brand-link img{height:60px;object-fit:contain;object-position:left center}
 .footer-brand img{height:75px;object-fit:contain;object-position:left center;display:block}
 @media(max-width:680px){.brand-link img{height:52px}}
+
+/* Primary tricolor logo needs a light field against the charcoal navigation bar. */
+.header .brand-link{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;padding:7px 12px;background:#fff;border-radius:5px;box-shadow:0 2px 10px rgba(0,0,0,.2);line-height:0}
+.header .brand-link img{display:block;width:190px;height:58px;max-height:none;max-width:100%;object-fit:contain;object-position:center}
+.header .brand-link:focus-visible{outline:3px solid #ec2a33;outline-offset:3px}
+@media(max-width:680px){.header .brand-link{padding:6px 9px}.header .brand-link img{width:150px;height:46px}}
