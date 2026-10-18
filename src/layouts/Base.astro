@@ -10,7 +10,7 @@ const links=[['/about/','Our Story'],['/programs/','Our Programs'],['/events/','
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
 <div class="announcement"><div class="wrap">RIDER-LED. MISSION-DRIVEN. <span>Our foundation programs are being developed.</span> <a href="/about/">Learn our story <span aria-hidden="true">↗</span></a></div></div>
-<header class="header"><div class="nav wrap"><a class="brand-link" href="/" aria-label="GEAR Moto Foundation home"><img src="/images/Gear_Logo_White.png" alt="GEAR Moto Foundation" width="960" height="300" decoding="async"/></a>
+<header class="header"><div class="nav wrap"><a class="brand-link" href="/" aria-label="GEAR Moto Foundation home"><img src="/images/Gear_Logo_Main.png" alt="GEAR Moto Foundation" width="960" height="300" decoding="async"/></a>
 <details class="mobile-menu"><summary aria-label="Toggle navigation"><span class="menu-icon">☰</span> Menu</summary><nav class="mobile-menu-panel" aria-label="Mobile navigation">{links.map(([href,label])=><a href={href} aria-current={path===href?'page':undefined}>{label}</a>)}<a href="/get-help/">Get Help</a><a href="/volunteer/">Get Involved</a><a href="/contact/">Contact</a><a class="btn btn-red" href="/donate/">Support the Mission ↗</a></nav></details>
 <nav class="navlinks" aria-label="Main navigation">{links.map(([href,label])=><a href={href} aria-current={path===href?'page':undefined}>{label}</a>)}</nav><a class="header-help" href="/get-help/">Get Help</a><a class="btn btn-red nav-cta" href="/donate/">Support the Mission <span aria-hidden="true">↗</span></a></div></header>
 <main id="main-content"><slot/></main>
