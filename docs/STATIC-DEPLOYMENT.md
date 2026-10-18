@@ -27,3 +27,17 @@ The Astro static site is emitted in `dist/`. Check all routes and image referenc
 Gear = safety equipment. Education = training. Assistance = resource navigation and referrals. Recovery = accident-related medical and hardship aid under specific policies. Controlled motorsports eligibility is different from normal public-road eligibility in the proposed Rider Relief policy. Do not advertise theoretical grant maxima as available payments.
 
 Source-of-truth date: 2026-10-13. Documents and site remain proposed until adoption/verification.
+
+## Security and availability baseline — October 2026
+
+- Hosting: Cloudflare Pages, production custom domain gearmotofoundation.org; keep source and hosting under the GEAR-specific accounts.
+- Public content: permit crawler indexing of public pages and sitemap. Never put public site routes behind site-wide Cloudflare Access, Under Attack Mode, or aggressive country/ASN blocks.
+- Headers: `public/_headers` supplies static response hardening (frame protection, nosniff, referrer policy, permissions restrictions). Cloudflare Pages Functions responses require their own header handling; do not assume static `_headers` applies to function endpoints.
+- Form protection: `POST /api/contact` includes origin checks, length limits, field validation and a honeypot. It does **not** yet provide server-side durable rate limiting or verified CAPTCHA/Turnstile. Implement Cloudflare WAF rate limiting for this endpoint and optionally Turnstile with **server-side** token verification before public campaigns.
+- Suggested initial WAF rate-limit scope: POST requests to `/api/contact`, starting with a conservative per-IP threshold such as 10 requests per minute and managed challenge/block for obvious abuse. Verify current Cloudflare plan capabilities, event logs, false positives and legitimate shared-network traffic before enabling. Exempt no public pages from normal indexing.
+- Cloudflare dashboard controls to evaluate: Bot Fight Mode (observe false positives), WAF managed rules, DDoS protection, TLS minimum 1.2, HTTPS-only redirect, security alerts, and account MFA/passkeys. Avoid blanket bot blocking because that could harm search indexing.
+- Secrets: keep Resend credentials only in Cloudflare Pages environment variables, never in GitHub or client bundles. Rotate any exposed secrets. Grant collaborators least-privilege access.
+- Availability: monitor custom-domain health and Pages deployment success; preserve DNS/MX/TXT email records. Check logs and test mobile, desktop, Googlebot-compatible fetch and legitimate submissions after changes.
+- Recovery: maintain GitHub main-branch history, account recovery methods and a tested redeployment process.
+- Privacy: no public submission of sensitive medical/accident/financial documents through general contact forms.
+- Do not claim that a security control is enabled in Cloudflare until verified within the account. High security means protecting forms and administration without challenging ordinary readers by default.
