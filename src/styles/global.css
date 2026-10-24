@@ -134,7 +134,7 @@ body{overflow-x:hidden}
 .footer-bottom{padding-top:22px;padding-bottom:22px;border-top:1px solid #334047;display:flex;justify-content:space-between;gap:15px;color:#adb7bc;font-size:11px}
 .new-hero{position:relative;isolation:isolate;min-height:clamp(640px,72vw,805px);color:#fff;background:#151a1e;display:flex;align-items:center}
 .new-hero-img,.new-hero-shade{position:absolute;inset:0;height:100%;width:100%;z-index:-1}
-.new-hero-img{object-fit:cover;object-position:center 46%}.new-hero-shade{background:linear-gradient(90deg,rgba(9,14,18,.95) 0%,rgba(9,14,18,.83) 33%,rgba(9,14,18,.33) 73%,rgba(9,14,18,.19) 100%),linear-gradient(0deg,rgba(9,14,18,.35),transparent 40%)}
+.new-hero-img{object-fit:cover;object-position:center 46%}.new-hero-shade{background:linear-gradient(90deg,rgba(9,14,18,1) 0%,rgba(9,14,18,.98) 35%,rgba(9,14,18,.82) 53%,rgba(9,14,18,.3) 78%,rgba(9,14,18,.19) 100%),linear-gradient(0deg,rgba(9,14,18,.35),transparent 40%)}
 .hero-content{width:100%;padding-top:85px;padding-bottom:105px}.hero-kicker{display:flex;align-items:center;gap:13px;font-size:12px;font-weight:800;letter-spacing:.22em}.red-line{display:block;width:32px;height:3px;background:var(--gear-primary)}
 .new-hero h1{font-size:clamp(60px,8.6vw,124px);line-height:.91;letter-spacing:-.015em;color:white;margin:28px 0 25px;max-width:1050px}
 .new-hero h1 em,.closing-cta h2 em{font-style:normal;color:#ff424b}
@@ -533,3 +533,10 @@ figure.editorial-photo figcaption{max-width:100%;text-align:left}
 .header .brand-link img{display:block;width:190px;height:58px;max-height:none;max-width:100%;object-fit:contain;object-position:center}
 .header .brand-link:focus-visible{outline:3px solid #ec2a33;outline-offset:3px}
 @media(max-width:680px){.header .brand-link{padding:6px 9px}.header .brand-link img{width:150px;height:46px}}
+
+/* Footer contact simplification and logo visibility */
+.footer-brand img{display:block;width:min(245px,100%);height:auto;background:#fff;padding:8px 12px;border-radius:5px;object-fit:contain}
+.footer-contact p{margin:0 0 12px;color:#b8c2c8;line-height:1.6}
+.footer-contact a{display:block;line-height:1.55;margin-bottom:5px}
+.footer-contact a span{color:#abb8c2;font-size:12px}
+.footer-contact .footer-contact-all{margin-top:10px;color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
